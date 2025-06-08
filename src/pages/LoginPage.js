@@ -24,7 +24,7 @@ const LoginPage = () => {
                     content: "登录成功",
                 });
                 setTimeout(() => {
-                    if (currentUser.role.includes(4)) {
+                    if (currentUser.role.includes(2)) {
                         navigate("/mall/mallhome");
                     } else {
                         navigate("/main");
@@ -76,15 +76,9 @@ const LoginPage = () => {
                             color: blue.primary,
                             marginBottom: 8
                         }}>
-                            电商平台系统
+                            淘马头电商平台
                         </div>
-                        <div style={{
-                            fontSize: 16,
-                            color: "#666",
-                            marginBottom: 24
-                        }}>
-                            欢迎登录，请填写您的账户信息
-                        </div>
+
                     </div>
 
                     <Alert
