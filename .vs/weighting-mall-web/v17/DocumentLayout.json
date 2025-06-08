@@ -1,0 +1,618 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\111\\weighting-mall-web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\CreateOrder.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\CreateOrder.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\Pay.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\Pay.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\OrderDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\OrderDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\productList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\productDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productBrandList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\productBrandList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\MallGenreChildren.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\MallGenreChildren.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mall.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\mall.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\brandList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\brandList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\brandList.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\brandList.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\service\\OrderService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\service\\OrderService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\service\\RoleService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\service\\RoleService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\service\\UserService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\service\\UserService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\service\\MenuService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\service\\MenuService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\service\\MallGenreService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\service\\MallGenreService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\service\\BrandService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\service\\BrandService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\App.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\logo.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\logo.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\reportWebVitals.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\reportWebVitals.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\setupTests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\setupTests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\router.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\router.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\MallOrderManagement.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\MallOrderManagement.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallShoppingCar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\mallShoppingCar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallGenre.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\mallGenre.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productGenreList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\productGenreList.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\user\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\user\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\SubmitOrder.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\SubmitOrder.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\ProductDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\ProductDetail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaySuccess.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\PaySuccess.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaymentMethod.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\PaymentMethod.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaymentConfirmation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\order\\PaymentConfirmation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallUser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\mallUser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallHome.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\mallHome.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pay.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\Pay.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\Pay.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\Pay.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\Pay.js",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-03T09:59:08.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoleService.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\service\\RoleService.js",
+              "RelativeDocumentMoniker": "src\\service\\RoleService.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\service\\RoleService.js",
+              "RelativeToolTip": "src\\service\\RoleService.js",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:22:22.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "brandList.css",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\brandList.css",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\brandList.css",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\brandList.css",
+              "RelativeToolTip": "src\\pages\\product\\mall\\brandList.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-02T11:25:29.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "brandList.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\brandList.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\brandList.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\brandList.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\brandList.js",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAJoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:23:14.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MallGenreChildren.css",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\MallGenreChildren.css",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\MallGenreChildren.css",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\MallGenreChildren.css",
+              "RelativeToolTip": "src\\pages\\product\\mall\\MallGenreChildren.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-02T11:23:38.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "productBrandList.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productBrandList.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\productBrandList.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productBrandList.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\productBrandList.js",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAOUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:22:36.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "productDetail.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productDetail.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\productDetail.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productDetail.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\productDetail.js",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:22:45.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "productList.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productList.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\productList.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productList.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\productList.js",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAAP4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:23:04.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateOrder.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\CreateOrder.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\CreateOrder.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\CreateOrder.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\CreateOrder.js",
+              "ViewState": "AgIAALwBAAAAAAAAAAAAANsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:24:08.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDetail.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\OrderDetail.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\OrderDetail.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\OrderDetail.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\OrderDetail.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:24:30.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderService.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\service\\OrderService.js",
+              "RelativeDocumentMoniker": "src\\service\\OrderService.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\service\\OrderService.js",
+              "RelativeToolTip": "src\\service\\OrderService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:23:47.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "mall.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mall.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\mall.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mall.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\mall.js",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:36:16.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserService.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\service\\UserService.js",
+              "RelativeDocumentMoniker": "src\\service\\UserService.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\service\\UserService.js",
+              "RelativeToolTip": "src\\service\\UserService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:22:20.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MenuService.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\service\\MenuService.js",
+              "RelativeDocumentMoniker": "src\\service\\MenuService.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\service\\MenuService.js",
+              "RelativeToolTip": "src\\service\\MenuService.js",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:23:53.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MallGenreService.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\service\\MallGenreService.js",
+              "RelativeDocumentMoniker": "src\\service\\MallGenreService.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\service\\MallGenreService.js",
+              "RelativeToolTip": "src\\service\\MallGenreService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:24:04.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BrandService.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\service\\BrandService.js",
+              "RelativeDocumentMoniker": "src\\service\\BrandService.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\service\\BrandService.js",
+              "RelativeToolTip": "src\\service\\BrandService.js",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T12:24:16.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "setupTests.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\setupTests.js",
+              "RelativeDocumentMoniker": "src\\setupTests.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\setupTests.js",
+              "RelativeToolTip": "src\\setupTests.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:27:08.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "router.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\router.js",
+              "RelativeDocumentMoniker": "src\\router.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\router.js",
+              "RelativeToolTip": "src\\router.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:27:01.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "reportWebVitals.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\reportWebVitals.js",
+              "RelativeDocumentMoniker": "src\\reportWebVitals.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\reportWebVitals.js",
+              "RelativeToolTip": "src\\reportWebVitals.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:27:00.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "logo.svg",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\logo.svg",
+              "RelativeDocumentMoniker": "src\\logo.svg",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\logo.svg",
+              "RelativeToolTip": "src\\logo.svg",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2025-06-02T11:26:59.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\index.css",
+              "RelativeDocumentMoniker": "src\\index.css",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\index.css",
+              "RelativeToolTip": "src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-02T11:26:57.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.test.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\App.test.js",
+              "RelativeDocumentMoniker": "src\\App.test.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\App.test.js",
+              "RelativeToolTip": "src\\App.test.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:26:54.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\App.js",
+              "RelativeDocumentMoniker": "src\\App.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\App.js",
+              "RelativeToolTip": "src\\App.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:26:50.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.css",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\App.css",
+              "RelativeDocumentMoniker": "src\\App.css",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\App.css",
+              "RelativeToolTip": "src\\App.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-02T11:26:48.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MallOrderManagement.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\MallOrderManagement.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\MallOrderManagement.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\MallOrderManagement.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\MallOrderManagement.js",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAAAAUBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:15:16.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "mallShoppingCar.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallShoppingCar.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\mallShoppingCar.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallShoppingCar.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\mallShoppingCar.js",
+              "ViewState": "AgIAABYBAAAAAAAAAAAAADUBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:15:28.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "mallGenre.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallGenre.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\mallGenre.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallGenre.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\mallGenre.js",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv2EAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:23:26.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "productGenreList.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productGenreList.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\productGenreList.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\productGenreList.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\productGenreList.js",
+              "ViewState": "AgIAAIAAAAAAAAAAAADwv58AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:22:59.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "index.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\index.js",
+              "RelativeDocumentMoniker": "src\\index.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\index.js",
+              "RelativeToolTip": "src\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:26:56.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "login.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\user\\login.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\user\\login.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\user\\login.js",
+              "RelativeToolTip": "src\\pages\\product\\user\\login.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:25:20.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SubmitOrder.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\SubmitOrder.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\SubmitOrder.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\SubmitOrder.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\SubmitOrder.js",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:25:13.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductDetail.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\ProductDetail.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\ProductDetail.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\ProductDetail.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\ProductDetail.js",
+              "ViewState": "AgIAABwBAAAAi1c+EXMwwIkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T08:52:14.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PaySuccess.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaySuccess.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\PaySuccess.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaySuccess.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\PaySuccess.js",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:24:59.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PaymentMethod.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaymentMethod.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\PaymentMethod.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaymentMethod.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\PaymentMethod.js",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:24:55.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PaymentConfirmation.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaymentConfirmation.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\order\\PaymentConfirmation.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\order\\PaymentConfirmation.js",
+              "RelativeToolTip": "src\\pages\\product\\order\\PaymentConfirmation.js",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:24:49.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "mallUser.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallUser.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\mallUser.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallUser.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\mallUser.js",
+              "ViewState": "AgIAAMsAAAAAAAAAAADwv+oAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T11:15:45.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "mallHome.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallHome.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\mallHome.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallHome.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\mallHome.js",
+              "ViewState": "AgIAAH0BAAAAAAAAAADwv5MBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-02T09:50:32.589Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

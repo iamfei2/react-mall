@@ -1,0 +1,60 @@
+.shopping-cart-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.bottom-menu {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-menu .ant-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*标题水平居中*/
+.titlePosition {
+  text-align: center;
+}
+
+.cardStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 8%;
+  position: fixed;
+  bottom: 11%;
+  left: 10%;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+}
+
+.blueButtonStyle {
+  right: -20%;
+}
+
+.redButtonStyle {
+  left: -20%;
+}
+
+.buttonPosition {
+  position: relative;
+  left: 70%;
+}

@@ -1,0 +1,29 @@
+/* App.css */
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*padding: 20px;*/
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: calc(50% - 20px); /* 每个菜单项占据一行的一半宽度，减去间距 */
+    margin-bottom: 20px; /* 每行之间的间距 */
+}
+
+.menu-item-image {
+    width: 120%; /* 设置图片的宽度 */
+    height: 120%; /* 设置图片的高度 */
+    object-fit: cover;
+    margin-bottom: 10px; /* 图片和文字之间的间距 */
+}
+
+.menu-item-name {
+    font-size: 15px;
+    color: #333;
+}
