@@ -1,57 +1,117 @@
-import React, { useImperativeHandle } from 'react';
-
+import React, { useImperativeHandle, forwardRef } from 'react';
 import { Form, Input, Modal, Switch, InputNumber } from 'antd';
-import { forwardRef } from 'react';
 
 const MenuEditForm = forwardRef(({ initialValues }, ref) => {
   const [form] = Form.useForm();
 
-  /* eslint-disable-next-line react-hooks/exhaustive-deps */
   useImperativeHandle(ref, () => form, []);
 
+  // 自定义表单字段样式
+  const formItemStyle = {
+    marginBottom: '22px',
+    padding: '8px 0',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.05)'
+  };
+
   return (
-    <Form 
-      layout="horizontal" labelCol={{span: 4}} wrapperCol={{span: 20}}
-      form={form} initialValues={initialValues} preserve={false}
-    >
-      <Form.Item name="id" label="编号">
-        <Input type="number" disabled/>
-      </Form.Item>
-      <Form.Item name="name" label="菜单"
-        rules={[
-          {
-            required: true,
-            message: '请输入菜单名称',
-          },
-        ]}
+      <Form
+          layout="vertical"
+          form={form}
+          initialValues={initialValues}
+          preserve={false}
+          style={{ padding: '0 16px' }}
       >
-        <Input />
-      </Form.Item>
-      <Form.Item name="parent" label="父级"
-        rules={[
-          {
-            type: 'number',
-            required: true,
-            message: '请输入父级菜单编号, 0为顶级菜单',
-          },
-        ]}
-      >
-        <InputNumber />
-      </Form.Item>
-      <Form.Item name="path" label="路径"
-        rules={[
-          {
-            required: true,
-            message: '请输入路径',
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item name="enable" label="是否启用" valuePropName="checked">
-        <Switch />
-      </Form.Item>
-    </Form>
+        <Form.Item
+            name="id"
+            label={<span style={{ fontWeight: 600, color: '#2c3e50' }}>编号</span>}
+            style={formItemStyle}
+        >
+          <Input
+              type="number"
+              disabled
+              style={{
+                height: '42px',
+                borderRadius: '8px',
+                border: '1px solid #e0e0e0',
+                padding: '0 16px'
+              }}
+          />
+        </Form.Item>
+
+        <Form.Item
+            name="name"
+            label={<span style={{ fontWeight: 600, color: '#2c3e50' }}>菜单名称</span>}
+            rules={[{ required: true, message: '请输入菜单名称' }]}
+            style={formItemStyle}
+        >
+          <Input
+              placeholder="请输入菜单名称"
+              style={{
+                height: '42px',
+                borderRadius: '8px',
+                border: '1px solid #e0e0e0',
+                padding: '0 16px'
+              }}
+          />
+        </Form.Item>
+
+        <Form.Item
+            name="parent"
+            label={<span style={{ fontWeight: 600, color: '#2c3e50' }}>父级菜单</span>}
+            rules={[
+              {
+                type: 'number',
+                required: true,
+                message: '请输入父级菜单编号, 0为顶级菜单',
+              },
+            ]}
+            style={formItemStyle}
+        >
+          <InputNumber
+              placeholder="父级菜单编号 (0为顶级菜单)"
+              style={{
+                width: '100%',
+                height: '42px',
+                borderRadius: '8px',
+                border: '1px solid #e0e0e0',
+                padding: '0 16px'
+              }}
+          />
+        </Form.Item>
+
+        <Form.Item
+            name="path"
+            label={<span style={{ fontWeight: 600, color: '#2c3e50' }}>路径</span>}
+            rules={[{ required: true, message: '请输入路径' }]}
+            style={formItemStyle}
+        >
+          <Input
+              placeholder="请输入路径"
+              style={{
+                height: '42px',
+                borderRadius: '8px',
+                border: '1px solid #e0e0e0',
+                padding: '0 16px'
+              }}
+          />
+        </Form.Item>
+
+        <Form.Item
+            name="enable"
+            label={<span style={{ fontWeight: 600, color: '#2c3e50' }}>是否启用</span>}
+            valuePropName="checked"
+            style={{ ...formItemStyle, marginBottom: '8px' }}
+        >
+          <Switch
+              checkedChildren="启用"
+              unCheckedChildren="禁用"
+              style={{
+                width: '60px',
+                backgroundColor: initialValues.enable ? '#52c41a' : '#f5222d'
+              }}
+          />
+        </Form.Item>
+      </Form>
   );
 });
 
@@ -72,23 +132,55 @@ const MenuEditFormModal = ({ open, onCreate, onCancel, initialValues }) => {
   };
 
   return (
-    <Modal
-      open={open}
-      title="菜单编辑"
-      okText="确定"
-      cancelText="取消"
-      okButtonProps={{
-        autoFocus: true,
-      }}
-      onCancel={onCancel}
-      destroyOnClose
-      onOk={handleOk}
-    >
-      <MenuEditForm
-        ref={formRef}
-        initialValues={initialValues}
-      />
-    </Modal>
+      <Modal
+          open={open}
+          title={
+            <div style={{
+              fontSize: '20px',
+              fontWeight: 700,
+              color: '#2c3e50',
+              display: 'flex',
+              alignItems: 'center',
+              padding: '16px 24px',
+              borderBottom: '1px solid rgba(0, 0, 0, 0.05)'
+            }}>
+              <span>菜单管理</span>
+            </div>
+          }
+          okText="保存"
+          cancelText="取消"
+          okButtonProps={{
+            style: {
+              background: 'linear-gradient(45deg, #1890ff, #096dd9)',
+              border: 'none',
+              fontWeight: 600,
+              boxShadow: '0 4px 10px rgba(24, 144, 255, 0.3)',
+              borderRadius: '8px',
+              height: '42px',
+              padding: '0 24px'
+            }
+          }}
+          cancelButtonProps={{
+            style: {
+              border: '1px solid #d9d9d9',
+              fontWeight: 600,
+              borderRadius: '8px',
+              height: '42px',
+              padding: '0 24px'
+            }
+          }}
+          onCancel={onCancel}
+          destroyOnClose
+          onOk={handleOk}
+          bodyStyle={{ padding: '0' }}
+          width={600}
+          style={{ borderRadius: '12px', overflow: 'hidden' }}
+          maskStyle={{ background: 'rgba(0, 0, 0, 0.45)' }}
+      >
+        <div style={{ padding: '16px 0' }}>
+          <MenuEditForm ref={formRef} initialValues={initialValues} />
+        </div>
+      </Modal>
   );
 };
 

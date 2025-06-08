@@ -21,7 +21,7 @@ function XZApp() {
   return (
     <App className="App">
       <Layout style={{minHeight: "100vh" }}>
-        <Header style={{  background: "#ff96b4", maxHeight:"10%", display: "flex", alignItems: "center" }}>
+        <Header style={{  background: "#f0f9ff", maxHeight:"10%", display: "flex", alignItems: "center" }}>
           <UserDropdown />
         </Header>
         <Outlet />
