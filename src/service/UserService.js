@@ -10,24 +10,6 @@ const defaultUserList = [
     },
     {
       id: 2,
-      username: "storeKeeper",
-      email: "store@bjtu.com",
-      password: "123456",
-      name: "商品管理员",
-      role: [2],
-      enable: true,
-    },
-    {
-      id: 3,
-      username: "order",
-      email: "order@bjtu.com",
-      password: "123456",
-      name: "订单管理员",
-      role: [3],
-      enable: true,
-    },
-    {
-      id: 4,
       username: "Customer1",
       email: "customer1@bjtu.com",
       password: "Customer1",
@@ -35,15 +17,7 @@ const defaultUserList = [
       role: [4],
       enable: true,
     },
-    {
-      id: 5,
-      username: "customer2",
-      email: "customer2@bjtu.com",
-      password: "Xz123456",
-      name: "customer2",
-      role: [4],
-      enable: true,
-    },
+
   ];
   
   class UserService {
