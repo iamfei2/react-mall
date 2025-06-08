@@ -1,70 +1,55 @@
 //品牌介绍
-import xiaomi from "./images/xiaomi.png"
-import hla from "./images/hla.png"
-import sumsung from "./images/sumsung.png"
-import huawei from "./images/huawei.png"
-import gree from "./images/gree.png"
-import fotile from "./images/fotile.png"
-import vanward from "./images/vanward.png"
-import oppo from "./images/oppo.png"
+import 三只松鼠 from "./images/三只松鼠.png"
+import 卫龙 from "./images/卫龙.png"
+import 大疆 from "./images/大疆.png"
+import 海尔 from "./images/海尔.png"
+import 美的 from "./images/美的.png"
+import 舒克 from "./images/舒克.png"
 const defaultBrandList = [
     {
         id:1,
         frontName: `xiaomi`,
-        name: `小米`,
-        src: xiaomi,
-        story:'小米公司正式成立于2010年4月，是一家专注于高端智能手机、互联网电视自主研发的创新型科技企业。主要由前谷歌、微软、摩托、金山等知名公司的顶尖人才组建。'
+        name: `三只松鼠`,
+        src: 三只松鼠,
+        story:'三只松鼠，是三只松鼠股份有限公司旗下的休闲零食品牌。三只松鼠股份有限公司主要经营坚果和休闲零食，地址位于安徽省芜湖市，现已发展成为累计服务超1.7亿消费者的坚果行业龙头企业及上市公司】，并成功孵化婴童食品品牌“小鹿蓝蓝” 。'
     },
     {
         id:2,
-        frontName: `oppo`,
-        name: `oppo`,
-        src: oppo,
-        story:'OPPO于2008年推出第一款“笑脸手机”，由此开启探索和引领至美科技之旅。今天，OPPO凭借以Find和R系列手机为核心的智能终端产品，以及OPPO+等互联网服务，让全球消费者尽享至美科技。'
+        frontName: `舒克`,
+        name: `舒克`,
+        src: 舒克,
+        story:'舒客致力于洞察东方人口腔特性，专研更适合东方人的口腔美护产品，产品线涵盖牙刷、牙膏、漱口水、牙线棒、声波牙刷和智能冲牙器等全品类口腔护理产品，守护国人口腔健康，绽放东方自信笑。'
     },
     {
         id:3,
-        frontName: `hla`,
-        name: `海澜之家`,
-        src: hla,
-        story:'“海澜之家”（英文缩写：HLA）是海澜之家股份有限公司旗下的服装品牌，总部位于中国江苏省无锡市江阴市，主要采用连锁零售的模式，销售男性服装、配饰与相关产品。'
+        frontName: `卫龙`,
+        name: `卫龙`,
+        src: 卫龙,
+        story:'“卫龙创办于1999年，总部河南省漯河市。历经20余年发展已成为国内集研发、生产和销售为一体的现代化辣味休闲食品企业。'
     },
 
     {
         id:4,
-        frontName: `sumsung`,
-        name: `三星`,
-        src: sumsung,
-        story:'三星集团（英文：SAMSUNG、韩文：삼성）是韩国最大的跨国企业集团，三星集团包括众多的国际下属企业，旗下子公司有：三星电子、三星物产、三星人寿保险等，业务涉及电子、金融、机械、化学等众多领域。'
+        frontName: `大疆`,
+        name: `大疆`,
+        src: 大疆,
+        story:'大疆创新是深圳市大疆创新科技有限公司旗下的无人机品牌，创立于2006年。'
     },
     {
         id :5,
-        frontName: `huawei`,
-        name: `华为`,
-        src: huawei,
-        story:'荣耀品牌成立于2013年,是华为旗下手机双品牌之一。荣耀以“创新、品质、服务”为核心战略,为全球年轻人提供潮酷的全场景智能化体验,打造年轻人向往的先锋文化和潮流生活方式。'
+        frontName: `海尔`,
+        name: `海尔`,
+        src: 海尔,
+        story:'海尔创立于1984年，是全球领先的美好生活和数字化转型解决方案服务商。 [1-4] [12]在持续创业创新过程中，海尔集团始终坚持“人的价值最大化”为发展主线。'
     },
     {
         id:6,
-        frontName: `vanward`,
-        name: `万和`,
-        src: vanward,
-        story:'万和成立于1993年8月，总部位于广东顺德国家级高新技术开发区内，是国内生产规模最大的燃气具专业制造企业，也是中国燃气具发展战略的首倡者和推动者、中国五金制品协会燃气用具分会第三届理事长单位。'
+        frontName: `美的`,
+        name: `美的`,
+        src: 美的,
+        story:'美的集团股份有限公司（MEDI GROUP STOCK LIMITED），简称“美的集团”，是一家以从事通用设备制造业为主的企业，注册成立于2000年4月7日，'
     },
-    {
-        id:7,
-        frontName: `fotile`,
-        name: `方太`,
-        src: fotile,
-        story:'Fotile\'s 的故事。'
-    },
-    {
-        id:8,
-        frontName: `gree`,
-        name: `格力`,
-        src: gree,
-        story:'Gree\'s 的故事。'
-    },
+
 ];
 class BrandService {
     brandList = [];

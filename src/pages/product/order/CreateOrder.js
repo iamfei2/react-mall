@@ -51,7 +51,7 @@ const UserMsgPanel = styled.div`
     background-color: #e6f7ff;
     border-radius: 50%;
     margin-right: 16px;
-    
+
     span {
       color: #1890ff;
       font-size: 18px;
@@ -66,20 +66,20 @@ const UserMsgPanel = styled.div`
       display: flex;
       align-items: center;
       margin-bottom: 6px;
-      
+
       .name {
         font-size: 16px;
         font-weight: 500;
         color: #1a3353;
         margin-right: 12px;
       }
-      
+
       .phone {
         font-size: 14px;
         color: #666;
       }
     }
-    
+
     .address {
       font-size: 14px;
       color: #666;
@@ -89,7 +89,7 @@ const UserMsgPanel = styled.div`
 
   .edit-btn {
     padding-left: 8px;
-    
+
     span {
       color: #999;
       font-size: 16px;
@@ -148,13 +148,13 @@ const GoodsPanel = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+
       .price {
         color: #cf4444;
         font-size: 16px;
         font-weight: 500;
       }
-      
+
       .original-price {
         color: #999;
         font-size: 12px;
@@ -178,29 +178,29 @@ const InfoRow = styled.div`
   font-size: 14px;
   color: #666;
   border-bottom: 1px solid #f5f5f5;
-  
+
   &:last-child {
     border-bottom: none;
   }
-  
+
   .label {
     color: #666;
   }
-  
+
   .value {
     color: #1a3353;
     font-weight: 500;
   }
-  
+
   &.price {
     font-size: 15px;
-    
+
     .label {
       font-size: 15px;
       color: #333;
       font-weight: 500;
     }
-    
+
     .value {
       color: #cf4444;
       font-size: 18px;
@@ -225,12 +225,12 @@ const PayPanel = styled.div`
 
   .left {
     font-size: 14px;
-    
+
     .label {
       font-size: 14px;
       color: #666;
     }
-    
+
     .price {
       color: #cf4444;
       font-weight: bold;
@@ -260,40 +260,54 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
   transition: all 0.2s ease;
-  
+
   &:hover {
     opacity: 0.9;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
   }
-  
+
   &:active {
     transform: translateY(0);
   }
 `;
 
 const CreateOrderPage = () => {
+  // const location = useLocation();
+  // let product;
+  // let selectedColor;
+
+  //
+  // const searchParams = new URLSearchParams(location.search);
+  // const productInfo = searchParams.get("productInfo");
+  //
+  // if (productInfo) {
+  //   const parsedProductInfo = JSON.parse(decodeURIComponent(productInfo));
+  //   product = parsedProductInfo.product;
+  //   selectedColor = parsedProductInfo.selectedColor.target.value;
+  // }
+
+  // 修改获取商品数据的方式
   const location = useLocation();
-  let product;
-  let selectedColor;
+  const productInfo = location.state?.productInfo || JSON.parse(localStorage.getItem('tempProductInfo') || "{}");
   const selectedItems = location.state?.selectedItems || [];
+  // 使用解构赋值确保安全访问
+  const {
+    product = {},
+    selectedColor = "",
+    quantity = 1
+  } = productInfo;
 
-  const searchParams = new URLSearchParams(location.search);
-  const productInfo = searchParams.get("productInfo");
-
-  if (productInfo) {
-    const parsedProductInfo = JSON.parse(decodeURIComponent(productInfo));
-    product = parsedProductInfo.product;
-    selectedColor = parsedProductInfo.selectedColor.target.value;
-  }
+  // 计算总价时使用安全访问
+  const finalPrice = product.price ? product.price * quantity : 0;
 
   const handleBack = () => {
     window.history.back();
   };
 
-  // 完全还原原代码的价格计算逻辑
-  const totalPrice = selectedItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  const finalPrice = totalPrice === 0 ? 4899 : totalPrice;
+  // // 完全还原原代码的价格计算逻辑
+  // const totalPrice = selectedItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  // const finalPrice = totalPrice === 0 ? 4899 : totalPrice;
 
   // 点击支付按钮时将商品信息存入localStorage
   const handlePayClick = () => {
@@ -333,36 +347,38 @@ const CreateOrderPage = () => {
 
           <Card>
             {selectedItems.length > 0 ? (
-                selectedItems.map(product => (
-                    <GoodsPanel key={product.id}>
-                      <div className="pic">
-                        <img src={product.image} alt={product.name} />
-                      </div>
+                selectedItems.map(item => (
+                    <GoodsPanel key={item.product?.id || 'fallback-key'}>
+                      <div className="pic"></div>
                       <div className="info">
-                        <div className="name">{product.name}</div>
-                        <div className="desc">{product.description}</div>
+                        <div className="name">{item.product?.name || '商品名称'}</div>
+                        {item.selectedColor && (
+                            <div className="desc">{item.selectedColor}</div>
+                        )}
                         <div className="price-row">
-                          <div className="price">¥{product.price}</div>
-                          <div className="original-price">¥{product.originalPrice}</div>
+                          <div className="price">¥{item.product?.price || 0}</div>
+                          <div className="original-price">¥{item.product?.originalPrice || 0}</div>
                         </div>
                       </div>
-                      <div className="count">x{product.quantity}</div>
+                      <div className="count">x{item.quantity}</div>
                     </GoodsPanel>
                 ))
             ) : product && (
                 <GoodsPanel>
                   <div className="pic">
-                    <img src={product.images[selectedColor]} alt={product.name} />
+
                   </div>
                   <div className="info">
                     <div className="name">{product.name}</div>
-                    <div className="desc">{selectedColor}</div>
+                    {selectedColor && (
+                        <div className="desc">{selectedColor}</div>
+                    )}
                     <div className="price-row">
                       <div className="price">¥{product.price}</div>
                       <div className="original-price">¥{product.originalPrice}</div>
                     </div>
                   </div>
-                  <div className="count">x1</div>
+                  <div className="count">x{product.quantity || 1}</div>
                 </GoodsPanel>
             )}
           </Card>

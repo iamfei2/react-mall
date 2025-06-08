@@ -242,9 +242,7 @@ const MallHome = () => {
                                     position: "relative"
                                 }}
                                 bodyStyle={{ padding: "12px" }}
-                                onClick={() => item.id === 0
-                                    ? navigate('/product/ProductDetail')
-                                    : navigate('/productDetail/' + item.id)
+                                onClick={() => navigate('/productDetail/' + item.id)
                                 }
                             >
                                 <div style={{
@@ -279,7 +277,7 @@ const MallHome = () => {
                                         height: 36,
                                         overflow: "hidden",
                                         textOverflow: "ellipsis",
-                                        display: "-webkit-box",
+                                        // display: "-webkit-box",
                                         WebkitLineClamp: 2,
                                         WebkitBoxOrient: "vertical"
                                     }}

@@ -284,18 +284,18 @@ const OrderDetailPage = () => {
             </div>
           </UserMsgPanel>
 
-          {selectedItems?.length > 0 ? (
+          {selectedItems.length > 0 ? (
               selectedItems.map(item => (
-                  <GoodsPanel key={item.id}>
-                    <div className="pic">
-                      <img src={item.image} alt={item.name} />
-                    </div>
+                  <GoodsPanel key={item.product?.id || 'fallback-key'}>
+                    <div className="pic"></div>
                     <div className="info">
-                      <div className="name">{item.name}</div>
-                      <div className="desc">{item.description}</div>
+                      <div className="name">{item.product?.name || '商品名称'}</div>
+                      {item.selectedColor && (
+                          <div className="desc">{item.selectedColor}</div>
+                      )}
                       <div className="price-row">
-                        <div className="current-price">￥{item.price}</div>
-                        <div className="original-price">￥{item.originalPrice}</div>
+                        <div className="price">¥{item.product?.price || 0}</div>
+                        <div className="original-price">¥{item.product?.originalPrice || 0}</div>
                       </div>
                     </div>
                     <div className="count">x{item.quantity}</div>
@@ -304,17 +304,19 @@ const OrderDetailPage = () => {
           ) : product && (
               <GoodsPanel>
                 <div className="pic">
-                  <img src={product.images?.[selectedColor] || product.image} alt={product.name} />
+
                 </div>
                 <div className="info">
                   <div className="name">{product.name}</div>
-                  <div className="desc">{selectedColor}</div>
+                  {selectedColor && (
+                      <div className="desc">{selectedColor}</div>
+                  )}
                   <div className="price-row">
                     <div className="current-price">￥{product.price}</div>
                     <div className="original-price">￥{product.originalPrice}</div>
                   </div>
                 </div>
-                <div className="count">x1</div>
+                <div className="count">x{product.quantity || 1}</div>
               </GoodsPanel>
           )}
 

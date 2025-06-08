@@ -20,12 +20,18 @@ const SubmitOrder = () => {
 
     const toDetail = () => {
         // 获取参数
-        const productInfo = JSON.parse(localStorage.getItem('tempProductInfo'));
         // 在跳转链接中传递参数
-        window.location.href = `/product/OrderDetail?productInfo=${encodeURIComponent(JSON.stringify(productInfo))}`;
-        console.log("productInfo");
-        console.log(productInfo);
-
+        // window.location.href = `/product/OrderDetail?productInfo=${encodeURIComponent(JSON.stringify(productInfo))}`;
+        // console.log("productInfo");
+        // console.log(productInfo);
+        // 统一跳转到订单详情页面
+        // 添加 try-catch 防止解析失败
+        try {
+            const productInfo = JSON.parse(localStorage.getItem('tempProductInfo')) || {};
+            navigate('/product/OrderDetail', { state: { productInfo } });
+        } catch (e) {
+            console.error("解析商品信息失败", e);
+        }
     };
 
     return (

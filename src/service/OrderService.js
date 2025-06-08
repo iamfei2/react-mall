@@ -1,31 +1,32 @@
-// src/services/OrderService.js
-
 /**
+ * =============================================
  * 订单服务类 - 管理订单数据的增删改查
+ * =============================================
+ *
  * @status 0: 未发货, 1: 已发货
  */
 const defaultOrderList = [
     {
         id: 1,
-        productName: '华为 HUAWEI P20',
+        productName: '零食大礼包',
         orderNumber: '123456',
         customerName: 'Customer1',
-        price: '￥4444',
+        price: '￥666',
         amount: 2,
         status: 0,
-        storeName: 'HUAWEI 华为',
+        storeName: '零食大礼包',
         image: '/product1.png'
     },
     {
         id: 2,
-        productName: 'B2024春季新品男士卫衣',
+        productName: '美的吹风机',
         orderNumber: '456789',
         customerName: 'Customer1',
-        price: '￥55555',
-        storeName: '禾子先生',
+        price: '￥66',
+        storeName: '美的',
         status: 1,
         amount: 1,
-        image: '/second.jpg'
+        image: '/product2.jpg'
     }
 ];
 
@@ -35,13 +36,19 @@ class OrderService {
         this._initData();
     }
 
+    // ----------------------------------------
+    // 初始化方法
+    // ----------------------------------------
+
     /**
      * 初始化订单数据
      */
     _initData() {
         try {
             const storedData = localStorage.getItem('orderList');
-            this.orderList = storedData ? JSON.parse(storedData) : [...defaultOrderList];
+            this.orderList = storedData
+                ? JSON.parse(storedData)
+                : [...defaultOrderList];
             this._persistData();
         } catch (error) {
             console.error('订单数据初始化失败:', error);
@@ -56,6 +63,10 @@ class OrderService {
     _persistData() {
         localStorage.setItem('orderList', JSON.stringify(this.orderList));
     }
+
+    // ----------------------------------------
+    // 公共API方法
+    // ----------------------------------------
 
     /**
      * 获取所有订单
@@ -76,7 +87,8 @@ class OrderService {
             : 1;
 
         const timestamp = new Date();
-        const orderNumber = timestamp.toISOString()
+        const orderNumber = timestamp
+            .toISOString()
             .replace(/[-T:]/g, '')
             .split('.')[0];
 
@@ -105,6 +117,7 @@ class OrderService {
      * 更新订单发货状态
      * @param {number} id - 订单ID
      * @param {number} status - 新的状态 (0: 未发货, 1: 已发货)
+     * @returns {Object|null} 更新后的订单对象或null
      */
     updateOrderStatus(id, status) {
         const index = this.orderList.findIndex(order => order.id === id);
