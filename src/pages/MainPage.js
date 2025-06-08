@@ -9,20 +9,32 @@ const MainPage = () => {
     localStorage.clear();
     useLoginCheck();
     return (
-        <Layout>
-            <Sider>
+        <Layout style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)' }}>
+            <Sider
+                width={280}
+                style={{
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    backdropFilter: 'blur(10px)',
+                    borderRight: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
+                }}
+            >
                 <SideMenu />
             </Sider>
-            <Layout style={{ padding: '0 20px 0' }}>
+
+            <Layout style={{ padding: '0 30px', background: 'transparent' }}>
                 <Content
                     style={{
-                        padding: 15,
+                        padding: 25,
                         margin: 0,
-                        marginTop: 20,
-                        maxHeight: "90%",
-                        boxShadow: "0 0 5px #4285f4",
-                        background: "#f8f9fa",
-                        borderRadius: 10,
+                        marginTop: 25,
+                        height: "95vh",
+                        background: 'rgba(255, 255, 255, 0.85)',
+                        borderRadius: 20,
+                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
+                        backdropFilter: 'blur(10px)',
+                        border: '1px solid rgba(255, 255, 255, 0.6)',
+                        overflow: 'auto'
                     }}
                 >
                     <Outlet />
