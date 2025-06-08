@@ -84,8 +84,8 @@ const defaultProductList = [
     },
     {
         id: 5,
-        name: `HLA海澜之家简约动物印花短袖T恤`,
-        title: '2018夏季新品微弹舒适新款短T男生 6月6日-6月20日，满300减30，参与互动赢百元礼券，立即分享赢大奖',
+        name: `U2DW`,
+        title: 'U2DW 强势登场，成为你工作与娱乐的绝佳搭档！支持蓝牙和 2.4G 无线连接，轻松应对多设备使用场景。',
         genreId: 3,
         brandId: 3,
         price: 98,
@@ -97,8 +97,8 @@ const defaultProductList = [
     },
     {
         id: 6,
-        name: `HLA海澜之家蓝灰花纹圆领针织布短袖T恤`,
-        title: '2018夏季新品短袖T恤男HNTBJ2E080A 蓝灰花纹80 175/92A/L80A 蓝灰花纹80 175/92A/L',
+        name: `rog`,
+        title: 'ROG 幻 Air 系列定会让你爱不释手',
         genreId: 3,
         brandId: 3,
         price: 98,
@@ -110,8 +110,8 @@ const defaultProductList = [
     },
     {
         id: 7,
-        name: `HLA海澜之家短袖T恤男基础款`,
-        title: 'HLA海澜之家短袖T恤男基础款简约圆领HNTBJ2E153A藏青(F3)175/92A(50)',
+        name: `罗技`,
+        title: '罗技都能提供契合需求的优质产品，陪伴大家解锁科技生活的无限精彩 。',
         genreId: 3,
         brandId: 3,
         price: 98,
