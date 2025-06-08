@@ -103,7 +103,7 @@ const router = createBrowserRouter([
         path: 'mallGenre', element: <MallGenre />,
         children: [
           { path: 'clothes', element: <MallGenreChildren /> },
-          { path: 'phone', element: <MallGenreChildren /> },
+          { path: 'food', element: <MallGenreChildren /> },
           { path: 'appliances', element: <MallGenreChildren /> },
           { path: 'decoration', element: <MallGenreChildren /> },
           { path: 'car', element: <MallGenreChildren /> },

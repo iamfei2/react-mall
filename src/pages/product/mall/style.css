@@ -58,3 +58,23 @@
   position: relative;
   left: 70%;
 }
+
+.user-center .ant-card {
+  transition: all 0.3s ease;
+}
+
+.user-center .ant-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.user-center .ant-btn {
+  transition: transform 0.2s;
+}
+
+.user-center .ant-btn:active {
+  transform: scale(0.96);
+}
+
+.user-center .func-grid .ant-btn {
+  border-radius: 12px;
+}

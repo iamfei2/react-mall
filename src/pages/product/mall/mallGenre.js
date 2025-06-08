@@ -1,89 +1,146 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Badge } from 'antd';
 import React, { useContext, useEffect, useState } from 'react';
+import {
+    ShoppingOutlined,
+    FireOutlined,
+    GiftOutlined,
+    TagOutlined,
+    HomeOutlined,
+    HistoryOutlined,
+    StarOutlined,
+    SettingOutlined
+} from '@ant-design/icons';
 import { ServiceContext } from "../../../contexts/ServiceContext";
+
 const { Header, Content, Sider } = Layout;
 
 const MallGenre = () => {
     const { mallGenre: mallGenreService } = useContext(ServiceContext);
     const [mallGenre, setMallGenre] = useState([]);
+    const [activeKey, setActiveKey] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
-        setMallGenre(mallGenreService.getMallGenre());
-    }, [mallGenreService]);
+        const genres = mallGenreService.getMallGenre();
+        setMallGenre(genres);
+        if (genres.length > 0 && !activeKey) {
+            setActiveKey(genres[0].frontName);
+        }
+    }, [mallGenreService, activeKey]);
 
-    const menuItem = mallGenre.map(item => ({
-        key: item.frontName,
-        label: item.name,
-        icon: item.icon || null
-    }));
+    const menuItems = [
+        ...mallGenre.map(item => ({
+            key: item.frontName,
+            label: item.name,
+            icon: item.icon || <TagOutlined style={{ fontSize: 18 }} />,
+            badge: item.new ? <Badge dot color="#ff4d4f" /> : null
+        })),
+    ];
 
     const handleMenuClick = (e) => {
+        setActiveKey(e.key);
         navigate(e.key);
     };
 
     return (
         <Layout style={{
             minHeight: '100vh',
-            background: "#f5f7fa"
+            background: "#f8fafc"
         }}>
-            {/* 顶部标题栏 */}
+            {/* 顶部标题栏 - 现代风格 */}
             <Header style={{
-                position: 'fixed',
+                position: 'sticky',
+                top: 0,
                 zIndex: 10,
                 width: '100%',
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: 'space-between',
                 alignItems: 'center',
-                backgroundColor: '#1677ff',
-                color: 'white',
-                fontSize: 16,
-                fontWeight: 500,
+                backgroundColor: 'white',
+                color: '#333',
+                fontSize: 18,
+                fontWeight: 600,
                 height: 64,
-                lineHeight: '64px',
-                padding: 0,
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                padding: '0 24px',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+                borderBottom: '1px solid #f0f0f0'
             }}>
-                商品分类
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{
+                        width: 4,
+                        height: 20,
+                        background: '#1677ff',
+                        marginRight: 12,
+                        borderRadius: 2
+                    }} />
+                    <span>商品分类</span>
+                </div>
+
+                <SettingOutlined style={{
+                    fontSize: 20,
+                    color: '#666',
+                    cursor: 'pointer'
+                }} />
             </Header>
 
-            <Layout style={{ marginTop: 64, height: 'calc(100vh - 64px)' }}>
-                {/* 左侧分类菜单 */}
+            <Layout style={{
+                marginTop: 0,
+                height: 'calc(100vh - 64px)',
+                background: 'transparent'
+            }}>
+                {/* 左侧分类菜单 - 现代风格 */}
                 <Sider
-                    width={200}
+                    width={240}
                     style={{
                         background: 'white',
-                        boxShadow: '2px 0 8px rgba(0,0,0,0.05)',
-                        zIndex: 1
+                        boxShadow: '2px 0 10px rgba(0,0,0,0.03)',
+                        zIndex: 1,
+                        borderRight: '1px solid #f0f0f0'
                     }}
                 >
                     <Menu
                         mode="inline"
+                        selectedKeys={[activeKey]}
                         style={{
                             height: '100%',
-                            paddingTop: 8,
+                            padding: '16px 0',
                             background: 'transparent',
                             borderRight: 0
                         }}
                         onClick={handleMenuClick}
-                        items={menuItem}
+                        items={menuItems.map(item => ({
+                            ...item,
+                            label: (
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    paddingRight: 8
+                                }}>
+                                    <span>{item.label}</span>
+                                    {item.badge}
+                                </div>
+                            )
+                        }))}
                         theme="light"
                     />
                 </Sider>
 
                 {/* 右侧内容区域 */}
-                <Layout style={{ background: 'transparent' }}>
+                <Layout style={{
+                    background: 'transparent',
+                    padding: '16px 16px 16px 0'
+                }}>
                     <Content style={{
-                        padding: 16,
                         overflowY: 'auto',
-                        height: '100%'
+                        height: '100%',
+                        borderRadius: 16,
+                        background: 'white',
+                        boxShadow: '0 4px 16px rgba(0,0,0,0.03)'
                     }}>
                         <div style={{
-                            background: 'white',
-                            padding: 16,
-                            borderRadius: 12,
-                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                            padding: 24,
                             minHeight: '100%'
                         }}>
                             <Outlet />

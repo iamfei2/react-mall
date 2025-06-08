@@ -57,12 +57,6 @@ const MallGenreChildren = () => {
                                     />
                                 </div>
                                 <Text className="menu-item-name">{child.name}</Text>
-                                <Text strong className="menu-item-price">
-                                    ¥{getRandomPrice()}
-                                </Text>
-                                <Text className="menu-item-sales">
-                                    {getRandomSales()}人已购
-                                </Text>
                             </div>
                         ))
                     ) : (

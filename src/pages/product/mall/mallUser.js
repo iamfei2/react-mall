@@ -1,20 +1,18 @@
 import React from "react";
-import { Card, Button, Avatar, Divider, Tooltip, Row, Col, Badge } from "antd";
+import { Card, Button, Avatar, Divider, Tooltip, Row, Col, Badge, Progress } from "antd";
 import {
     MessageOutlined,
     SettingOutlined,
-    ProfileOutlined,
-    MoneyCollectOutlined,
-    TruckOutlined,
-    TransactionOutlined,
-    EnvironmentOutlined,
-    RightOutlined,
-    HeartOutlined,
-    StarOutlined,
+    ShoppingOutlined,
+    WalletOutlined,
+    TagOutlined,
+    StarFilled,
+    HeartFilled,
+    EnvironmentFilled,
+    HistoryOutlined,
     CommentOutlined,
-    ClockCircleOutlined,
-    LeftOutlined,
     CrownFilled,
+    RightOutlined,
     GiftFilled
 } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
@@ -24,122 +22,176 @@ const MallUser = () => {
     const navigate = useNavigate();
 
     const toOrderManagement = () => navigate('/mall/mallOrderManagement');
-    const toLogin = () => navigate('/main');
+    const toAddress = () => navigate('/address');
+    const toLogin = () => navigate('/login');
+
+    // 用户数据
+    const userData = {
+        name: "Tlectronic",
+        level: "黄金会员",
+        points: 5000,
+        growth: 1000,
+        coupons: 3,
+        levelProgress: 65,
+        orders: {
+            pending: 2,
+            delivering: 1,
+            reviewing: 3,
+            returning: 0
+        }
+    };
 
     return (
-        <div className="shopping-cart-page" style={{ background: "#f5f7fa", minHeight: "100vh" }}>
-            {/* 顶部导航栏 */}
+        <div className="user-center" style={{ background: "#f8fafc", minHeight: "100vh", paddingBottom: 24 }}>
+            {/* 顶部导航栏 - 简化设计 */}
             <div style={{
-                background: "#1677ff",
-                padding: "16px",
+                background: "linear-gradient(135deg, #1677ff 0%, #36cfc9 100%)",
+                padding: "16px 24px",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
+                boxShadow: "0 2px 12px rgba(0,0,0,0.08)"
             }}>
-                <Tooltip title="退出登录">
-                    <Button
-                        type="link"
-                        icon={<LeftOutlined style={{ color: "white" }} />}
-                        onClick={toLogin}
-                        style={{ color: "white" }}
-                    ></Button>
-                </Tooltip>
-
-                <div style={{ fontSize: 18, fontWeight: 500, color: "white" }}>我的账户</div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                    <Avatar
+                        src='/avatar.jpg'
+                        size={48}
+                        style={{ border: "2px solid rgba(255,255,255,0.3)", marginRight: 12 }}
+                    />
+                    <div>
+                        <div style={{ fontSize: 18, fontWeight: 600, color: "white" }}>{userData.name}</div>
+                        <Badge
+                            count={userData.level}
+                            style={{
+                                background: "rgba(255,255,255,0.25)",
+                                color: "white",
+                                padding: "2px 10px",
+                                borderRadius: 20,
+                                marginTop: 4
+                            }}
+                        />
+                    </div>
+                </div>
 
                 <div>
                     <Tooltip title="消息">
                         <Button
-                            type="link"
-                            icon={<MessageOutlined style={{ color: "white" }} />}
-                            style={{ color: "white" }}
+                            type="text"
+                            icon={<MessageOutlined style={{ color: "white", fontSize: 20 }} />}
+                            style={{ marginRight: 12 }}
                         />
                     </Tooltip>
                     <Tooltip title="设置">
                         <Button
-                            type="link"
-                            icon={<SettingOutlined style={{ color: "white" }} />}
-                            style={{ color: "white" }}
+                            type="text"
+                            icon={<SettingOutlined style={{ color: "white", fontSize: 20 }} />}
                         />
                     </Tooltip>
                 </div>
             </div>
 
-            {/* 用户信息卡片 */}
-            <div style={{ margin: "16px" }}>
+            {/* 用户成长体系 */}
+            <div style={{ margin: "16px", marginTop: 24 }}>
                 <Card
                     style={{
-                        borderRadius: 12,
-                        overflow: "hidden",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
-                        background: "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+                        borderRadius: 16,
+                        boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                         border: "none"
                     }}
                 >
-                    <div style={{ display: "flex", alignItems: "center", position: "relative" }}>
-                        <Avatar
-                            src='/avatar.jpg'
-                            size={64}
-                            style={{ border: "2px solid white" }}
-                        />
-
-                        <div style={{ marginLeft: 16 }}>
-                            <div style={{ fontSize: 20, fontWeight: 600, color: "white" }}>Tlectronic</div>
-                            <div style={{ display: "flex", alignItems: "center", marginTop: 4 }}>
-                                <Badge
-                                    count="白银会员"
-                                    style={{
-                                        background: "rgba(255,255,255,0.2)",
-                                        color: "white",
-                                        padding: "0 8px",
-                                        borderRadius: 12
-                                    }}
-                                />
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <CrownFilled style={{ color: "#faad14", fontSize: 24, marginRight: 12 }} />
+                            <div>
+                                <div style={{ fontWeight: 600 }}>会员成长值</div>
+                                <div style={{ fontSize: 12, color: "#8c8c8c" }}>再消费¥500升级铂金会员</div>
                             </div>
                         </div>
-
-                        <Button
-                            type="primary"
-                            style={{
-                                position: "absolute",
-                                right: 0,
-                                top: 0,
-                                background: "rgba(255,255,255,0.2)",
-                                border: "1px solid rgba(255,255,255,0.3)",
-                                borderRadius: 16
-                            }}
-                            icon={<CrownFilled />}
-                        >
-                            开通会员
-                        </Button>
+                        <Button type="link" style={{ fontWeight: 500 }}>查看权益</Button>
                     </div>
 
-                    <Divider style={{ background: "rgba(255,255,255,0.2)", margin: "16px 0" }} />
+                    <div style={{ marginTop: 16 }}>
+                        <Progress
+                            percent={userData.levelProgress}
+                            strokeColor={{ '0%': '#36cfc9', '100%': '#1677ff' }}
+                            showInfo={false}
+                        />
+                        <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>
+                            <span style={{ fontSize: 12 }}>当前等级</span>
+                            <span style={{ fontSize: 12 }}>下一等级</span>
+                        </div>
+                    </div>
 
-                    <Row gutter={16} style={{ textAlign: "center" }}>
-                        <Col span={8}>
-                            <div style={{ fontSize: 18, fontWeight: 600, color: "white" }}>5000</div>
-                            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.8)" }}>积分</div>
+                    <Divider style={{ margin: "16px 0" }} />
+
+                    <Row gutter={16}>
+                        <Col span={8} style={{ textAlign: "center" }}>
+                            <div style={{ fontSize: 18, fontWeight: 600 }}>{userData.points}</div>
+                            <div style={{ fontSize: 13, color: "#595959" }}>积分</div>
                         </Col>
-                        <Col span={8}>
-                            <div style={{ fontSize: 18, fontWeight: 600, color: "white" }}>1000</div>
-                            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.8)" }}>成长值</div>
+                        <Col span={8} style={{ textAlign: "center" }}>
+                            <div style={{ fontSize: 18, fontWeight: 600 }}>{userData.growth}</div>
+                            <div style={{ fontSize: 13, color: "#595959" }}>成长值</div>
                         </Col>
-                        <Col span={8}>
-                            <div style={{ fontSize: 18, fontWeight: 600, color: "white" }}>暂无</div>
-                            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.8)" }}>优惠券</div>
+                        <Col span={8} style={{ textAlign: "center" }}>
+                            <div style={{ fontSize: 18, fontWeight: 600 }}>{userData.coupons}</div>
+                            <div style={{ fontSize: 13, color: "#595959" }}>优惠券</div>
                         </Col>
                     </Row>
                 </Card>
             </div>
 
-            {/* 订单功能区 */}
+            {/* 快捷功能区 - 九宫格布局 */}
             <div style={{ margin: "16px" }}>
                 <Card
                     style={{
-                        borderRadius: 12,
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+                        borderRadius: 16,
+                        boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
+                    }}
+                    bodyStyle={{ padding: "16px 8px" }}
+                >
+                    <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 16, padding: "0 8px" }}>常用功能</div>
+
+                    <Row gutter={[16, 16]}>
+                        {[
+                            { icon: <ShoppingOutlined style={{ fontSize: 24 }} />, text: "我的订单", action: toOrderManagement },
+                            { icon: <WalletOutlined style={{ fontSize: 24 }} />, text: "我的钱包" },
+                            { icon: <TagOutlined style={{ fontSize: 24 }} />, text: "优惠券" },
+                            { icon: <GiftFilled style={{ fontSize: 24 }} />, text: "我的礼物" },
+                            { icon: <HeartFilled style={{ fontSize: 24, color: "#ff4d4f" }} />, text: "收藏夹" },
+                            { icon: <StarFilled style={{ fontSize: 24, color: "#faad14" }} />, text: "商品关注" },
+                            { icon: <EnvironmentFilled style={{ fontSize: 24, color: "#36cfc9" }} />, text: "地址管理" },
+                            { icon: <HistoryOutlined style={{ fontSize: 24 }} />, text: "浏览历史" },
+                            { icon: <CommentOutlined style={{ fontSize: 24 }} />, text: "评价" }
+                        ].map((item, index) => (
+                            <Col span={8} key={index}>
+                                <Button
+                                    type="text"
+                                    icon={item.icon}
+                                    onClick={item.action}
+                                    style={{
+                                        width: "100%",
+                                        height: 80,
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        justifyContent: "center",
+                                        alignItems: "center"
+                                    }}
+                                >
+                                    <div style={{ marginTop: 8, fontSize: 13 }}>{item.text}</div>
+                                </Button>
+                            </Col>
+                        ))}
+                    </Row>
+                </Card>
+            </div>
+
+            {/* 订单状态卡片 */}
+            <div style={{ margin: "16px" }}>
+                <Card
+                    style={{
+                        borderRadius: 16,
+                        boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
                     bodyStyle={{ padding: 16 }}
                 >
@@ -148,84 +200,141 @@ const MallUser = () => {
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",
-                            marginBottom: 16
+                            marginBottom: 16,
+                            cursor: "pointer"
                         }}
                         onClick={toOrderManagement}
                     >
                         <div style={{ display: "flex", alignItems: "center" }}>
-                            <ProfileOutlined style={{ fontSize: 18, color: "#1677ff" }} />
-                            <span style={{ marginLeft: 8, fontWeight: 500 }}>我的订单</span>
+                            <ShoppingOutlined style={{ fontSize: 18, color: "#1677ff", marginRight: 8 }} />
+                            <span style={{ fontWeight: 500 }}>我的订单</span>
                         </div>
-                        <RightOutlined style={{ color: "#999" }} />
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <span style={{ fontSize: 13, color: "#8c8c8c", marginRight: 4 }}>查看全部</span>
+                            <RightOutlined style={{ fontSize: 12, color: "#bfbfbf" }} />
+                        </div>
                     </div>
 
                     <Divider style={{ margin: "12px 0" }} />
 
                     <Row gutter={[0, 16]} style={{ textAlign: "center" }}>
                         <Col span={6}>
-                            <Button type="text" icon={<MoneyCollectOutlined style={{ fontSize: 24, color: "#ff4d4f" }} />} />
-                            <div style={{ fontSize: 14, marginTop: 4 }}>待付款</div>
+                            <Badge count={userData.orders.pending} size="small" offset={[-5, 5]}>
+                                <Button
+                                    type="text"
+                                    icon={<WalletOutlined style={{ fontSize: 24, color: "#ff4d4f" }} />}
+                                />
+                            </Badge>
+                            <div style={{ fontSize: 13, marginTop: 4 }}>待付款</div>
                         </Col>
                         <Col span={6}>
-                            <Button type="text" icon={<TruckOutlined style={{ fontSize: 24, color: "#faad14" }} />} />
-                            <div style={{ fontSize: 14, marginTop: 4 }}>待收货</div>
+                            <Badge count={userData.orders.delivering} size="small" offset={[-5, 5]}>
+                                <Button
+                                    type="text"
+                                    icon={<GiftFilled style={{ fontSize: 24, color: "#fa8c16" }} />}
+                                />
+                            </Badge>
+                            <div style={{ fontSize: 13, marginTop: 4 }}>待收货</div>
                         </Col>
                         <Col span={6}>
-                            <Button type="text" icon={<TransactionOutlined style={{ fontSize: 24, color: "#52c41a" }} />} />
-                            <div style={{ fontSize: 14, marginTop: 4 }}>待评价</div>
+                            <Badge count={userData.orders.reviewing} size="small" offset={[-5, 5]}>
+                                <Button
+                                    type="text"
+                                    icon={<CommentOutlined style={{ fontSize: 24, color: "#52c41a" }} />}
+                                />
+                            </Badge>
+                            <div style={{ fontSize: 13, marginTop: 4 }}>待评价</div>
                         </Col>
                         <Col span={6}>
-                            <Button type="text" icon={<GiftFilled style={{ fontSize: 24, color: "#722ed1" }} />} />
-                            <div style={{ fontSize: 14, marginTop: 4 }}>退换货</div>
+                            <Badge count={userData.orders.returning} size="small" offset={[-5, 5]}>
+                                <Button
+                                    type="text"
+                                    icon={<HistoryOutlined style={{ fontSize: 24, color: "#722ed1" }} />}
+                                />
+                            </Badge>
+                            <div style={{ fontSize: 13, marginTop: 4 }}>退换/售后</div>
                         </Col>
                     </Row>
                 </Card>
             </div>
 
-            {/* 功能列表 */}
+            {/* 推荐服务区 */}
             <div style={{ margin: "16px" }}>
                 <Card
                     style={{
-                        borderRadius: 12,
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+                        borderRadius: 16,
+                        boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     }}
-                    bodyStyle={{ padding: 0 }}
+                    bodyStyle={{ padding: 16 }}
                 >
-                    {[
-                        { icon: <EnvironmentOutlined style={{ color: "#13c2c2" }} />, text: "地址管理" },
-                        { icon: <ClockCircleOutlined style={{ color: "#fa8c16" }} />, text: "我的足迹" },
-                        { icon: <HeartOutlined style={{ color: "#eb2f96" }} />, text: "我的关注" },
-                        { icon: <StarOutlined style={{ color: "#fadb14" }} />, text: "我的收藏" },
-                        { icon: <CommentOutlined style={{ color: "#722ed1" }} />, text: "我的评价" },
-                    ].map((item, index) => (
-                        <div key={index}>
-                            <div
+                    <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 16 }}>推荐服务</div>
+
+                    <Row gutter={[16, 16]}>
+                        <Col span={12}>
+                            <Button
+                                type="default"
+                                block
                                 style={{
+                                    background: "#e6f7ff",
+                                    borderColor: "#91d5ff",
+                                    height: 48,
                                     display: "flex",
-                                    justifyContent: "space-between",
                                     alignItems: "center",
-                                    padding: "16px"
+                                    justifyContent: "center"
                                 }}
                             >
-                                <div style={{ display: "flex", alignItems: "center" }}>
-                                    <div style={{
-                                        width: 28,
-                                        height: 28,
-                                        background: "rgba(25, 118, 210, 0.1)",
-                                        borderRadius: "50%",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center"
-                                    }}>
-                                        {item.icon}
-                                    </div>
-                                    <span style={{ marginLeft: 12, fontWeight: 500 }}>{item.text}</span>
-                                </div>
-                                <RightOutlined style={{ color: "#999" }} />
-                            </div>
-                            {index < 4 && <Divider style={{ margin: 0 }} />}
-                        </div>
-                    ))}
+                                <span style={{ marginLeft: 8 }}>会员专享折扣</span>
+                            </Button>
+                        </Col>
+                        <Col span={12}>
+                            <Button
+                                type="default"
+                                block
+                                style={{
+                                    background: "#f6ffed",
+                                    borderColor: "#b7eb8f",
+                                    height: 48,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
+                                }}
+                            >
+                                <span style={{ marginLeft: 8 }}>积分兑换好礼</span>
+                            </Button>
+                        </Col>
+                        <Col span={12}>
+                            <Button
+                                type="default"
+                                block
+                                style={{
+                                    background: "#fff7e6",
+                                    borderColor: "#ffd591",
+                                    height: 48,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
+                                }}
+                            >
+                                <span style={{ marginLeft: 8 }}>专属客服</span>
+                            </Button>
+                        </Col>
+                        <Col span={12}>
+                            <Button
+                                type="default"
+                                block
+                                style={{
+                                    background: "#f9f0ff",
+                                    borderColor: "#d3adf7",
+                                    height: 48,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
+                                }}
+                            >
+                                <span style={{ marginLeft: 8 }}>生日特权</span>
+                            </Button>
+                        </Col>
+                    </Row>
                 </Card>
             </div>
         </div>

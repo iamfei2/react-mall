@@ -1,252 +1,169 @@
-//by ly
-import coat from "./images/外套.png";
-import Tshirt from "./images/T恤.png";
-import casualPants from "./images/休闲裤.png";
-import jeans from "./images/牛仔裤.png";
-import shirt from "./images/衬衫.png";
-import mobileCommunication from "./images/手机通讯.png"
-import phoneAccessories from "./images/手机配件.png"
-import photography from "./images/摄像摄影.png"
-import audio from "./images/影音娱乐.png"
-import digitalAccessories from "./images/数码配件.png"
-import television from "./images/电视.png"
-import airConditioning from "./images/空调.png"
-import washingMachine from "./images/洗衣机.png"
-import refrigerator from "./images/冰箱.png"
-import kitchenAppliances from "./images/厨卫大电.png"
-import bathroom from "./images/厨房卫浴.png"
-import lighting from "./images/灯饰照明.png"
-import hardware from  "./images/五金工具.png"
-import bedroom from "./images/卧室家具.png"
-import livingRoom from "./images/客厅家具.png"
-import newCar from "./images/全新整车.png"
-import carElectronics from "./images/车载电器.png"
-import maintenance from "./images/维修保养.png"
-import carDecoration from "./images/汽车装饰.png"
-import tablet from "./images/平板电脑.png"
-import notebook from "./images/笔记本.png"
-import hardDisk from "./images/硬盘.png"
+import coat from "./images/鼠标.png";
+import Tshirt from "./images/键盘.png";
+import casualPants from "./images/耳机.png";
+import jeans from "./images/U盘.png";
+import shirt from "./images/扩展坞.png";
+import chipsSnacks from "./images/零食.png"
+import candyChocolate from "./images/巧克力.png"
+import biscuits from "./images/饼干.png"
+import driedFruits from "./images/果干.png"
+import nutsSeeds from "./images/坚果.png"
+import bathroom from "./images/电动牙刷.png"
+import lighting from "./images/冲牙器.png"
+import hardware from "./images/电吹风.png"
+import bedroom from "./images/卷发器.png"
+import livingRoom from "./images/剃须刀.png"
+import newCar from "./images/运动.png"
+import carElectronics from "./images/微单.png"
+import maintenance from "./images/ccd.png"
+import carDecoration from "./images/配件.png"
+
 const defaultMallGenreList = [
     {
-        id:1,
+        id: 1,
         frontName: `clothes`,
-        name: `服装`,
-        children:[
+        name: `外设`,
+        children: [
             {
-                id:2,
-                frontName:'coat',
-                name:'外套',
-                src:coat,
+                id: 2,
+                frontName: 'coat',
+                name: '鼠标',
+                src: coat,
             },
             {
-                id:3,
-                frontName:'tshirt',
-                name: `T恤`,
-                src:Tshirt,
+                id: 3,
+                frontName: 'tshirt',
+                name: `键盘`,
+                src: Tshirt,
             },
             {
-                id:4,
-                frontName:'casualPants',
-                name: `休闲裤`,
-                src:casualPants,
+                id: 4,
+                frontName: 'casualPants',
+                name: `耳机`,
+                src: casualPants,
 
             },
             {
-                id:5,
-                frontName:'jeans',
-                name: `牛仔裤`,
-                src:jeans,
+                id: 5,
+                frontName: 'jeans',
+                name: `U盘`,
+                src: jeans,
             },
             {
-                id:6,
-                frontName:'shirt',
-                name: `衬衫`,
-                src:shirt,
+                id: 6,
+                frontName: 'shirt',
+                name: `扩展坞`,
+                src: shirt,
             },
         ]
-
     },
     {
-        id:7,
-        frontName: `phone`,
-        name: `手机数码`,
-        children:[
+        id: 7,
+        frontName: `food`,
+        name: `零食`,
+        children: [
             {
-                id:8,
-                frontName:'mobileCommunication',
-                name:'手机通讯',
-                src:mobileCommunication,
+                id: 8,
+                frontName: 'chipsSnacks',
+                name: `休闲零食`,
+                src: chipsSnacks,
             },
             {
-                id:9,
-                frontName:'phoneAccessories',
-                name: `手机配件`,
-                src:phoneAccessories,
+                id: 9,
+                frontName: 'candyChocolate',
+                name: `糖果巧克力`,
+                src: candyChocolate,
             },
             {
-                id:10,
-                frontName:'photography',
-                name: `摄影摄像`,
-                src:photography,
-
+                id: 10,
+                frontName: 'biscuits',
+                name: `饼干糕点`,
+                src: biscuits,
             },
             {
-                id:11,
-                frontName:'audio',
-                name: `影音娱乐`,
-                src:audio,
+                id: 11,
+                frontName: 'driedFruits',
+                name: `果干蜜饯`,
+                src: driedFruits,
             },
             {
-                id:12,
-                frontName:'digitalAccessories',
-                name: `数码配件`,
-                src:digitalAccessories,
+                id: 12,
+                frontName: 'nutsSeeds',
+                name: `坚果炒货`,
+                src: nutsSeeds,
             },
         ]
-
     },
     {
-        id:13,
-        frontName: `appliances`,
-        name: `家用电器`,
-        children:[
-            {
-                id:14,
-                frontName:'television',
-                name:'电视',
-                src:television,
-            },
-            {
-                id:15,
-                frontName:'airConditioning',
-                name: `空调`,
-                src:airConditioning,
-            },
-            {
-                id:16,
-                frontName:'washingMachine',
-                name: `洗衣机`,
-                src:washingMachine,
-
-            },
-            {
-                id:17,
-                frontName:'refrigerator',
-                name: `冰箱`,
-                src:refrigerator,
-            },
-            {
-                id:18,
-                frontName:'kitchenAppliances',
-                name: `厨卫大电`,
-                src:kitchenAppliances,
-            },
-        ]
-
-
-    },
-    {
-        id:19,
+        id: 19,
         frontName: `decoration`,
-        name: `家具家装`,
-        children:[
+        name: `个护健康`,
+        children: [
             {
-                id:20,
-                frontName:'bathroom',
-                name:'厨房卫浴',
-                src:bathroom,
+                id: 20,
+                frontName: 'bathroom',
+                name: '电动牙刷',
+                src: bathroom,
             },
             {
-                id:21,
-                frontName:'lighting',
-                name: `灯饰照明`,
-                src:lighting,
+                id: 21,
+                frontName: 'lighting',
+                name: `冲牙器`,
+                src: lighting,
             },
             {
-                id:22,
-                frontName:'hardware',
-                name: `五金工具`,
-                src:hardware,
+                id: 22,
+                frontName: 'hardware',
+                name: `电吹风`,
+                src: hardware,
 
             },
             {
-                id:23,
-                frontName:'bedroom',
-                name: `卧室家具`,
-                src:bedroom,
+                id: 23,
+                frontName: 'bedroom',
+                name: `卷发器`,
+                src: bedroom,
             },
             {
-                id:24,
-                frontName:'livingRoom',
-                name: `客厅家具`,
-                src:livingRoom,
+                id: 24,
+                frontName: 'livingRoom',
+                name: `剃须刀`,
+                src: livingRoom,
             },
         ]
-
-
     },
     {
-        id:25,
+        id: 25,
         frontName: `car`,
-        name: `汽车用品`,
-        children:[
+        name: `相机`,
+        children: [
             {
-                id:26,
-                frontName:'newCar',
-                name:'全新整车',
-                src:newCar,
+                id: 26,
+                frontName: 'newCar',
+                name: '运动相机',
+                src: newCar,
             },
             {
-                id:27,
-                frontName:'carElectronics',
-                name: `车载电器`,
-                src:carElectronics,
+                id: 27,
+                frontName: 'carElectronics',
+                name: `微单相机`,
+                src: carElectronics,
             },
             {
-                id:28,
-                frontName:'maintenance',
-                name: `维修保养`,
-                src:maintenance,
+                id: 28,
+                frontName: 'maintenance',
+                name: `CCD相机`,
+                src: maintenance,
 
             },
             {
-                id:29,
-                frontName:'carDecoration',
-                name: `汽车装饰`,
-                src:carDecoration,
+                id: 29,
+                frontName: 'carDecoration',
+                name: `相机配件`,
+                src: carDecoration,
             },
 
         ]
-
-    },
-    {
-        id :30,
-        frontName: `computer`,
-        name: `电脑办公`,
-        children:[
-            {
-                id:31,
-                frontName:'tablet',
-                name:'平板电脑',
-                src:tablet,
-            },
-            {
-                id:32,
-                frontName:'notebook',
-                name: `笔记本`,
-                src:notebook,
-            },
-            {
-                id:33,
-                frontName:'hardDisk',
-                name: `硬盘`,
-                src:hardDisk,
-
-            },
-
-
-        ]
-
     },
 ];
 class MallGenreService {
