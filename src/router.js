@@ -8,9 +8,7 @@ import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
 import RolePage from "./pages/RolePage";
 import MenuPage from "./pages/MenuPage";
-import GoodPage from "./pages/GoodPage";
 import OrderPage from "./pages/OrderPage";
-import MarketingPage from "./pages/MarketingPage";
 import CustomPage from "./pages/CustomPage";
 import MenuService from "./service/MenuService";
 
@@ -43,9 +41,7 @@ const menuService = new MenuService();
 const menus = menuService.getMenus();
 
 const pageComponents = {
-  good: GoodPage,
   order: OrderPage,
-  marketing: MarketingPage,
   home: HomePage,
   user: UserPage,
   role: RolePage,
@@ -90,7 +86,7 @@ const router = createBrowserRouter([
       { path: "OrderDetail", element: <OrderDetail /> },
     ],
   },
-  //下面是ly加的
+
   { path: 'productDetail/:id', element: <ProductDetail1 /> },
 
   {

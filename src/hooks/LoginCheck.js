@@ -14,12 +14,12 @@ const useLoginCheck = () => {
         if (!user) {
           message.open({
             type: "warning",
-            content: "请先登录",
+            content: "请先登录商场",
           });
           navigate("/login");
         }
       } catch (error) {
-        console.error("检查登录出错: ", error);
+        console.error("错误: ", error);
       }
   })
 };

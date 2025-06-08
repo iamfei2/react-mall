@@ -10,9 +10,16 @@ const Pay = () => {
     const searchParams = new URLSearchParams(location.search);
     const price = searchParams.get('price') || '0';
 
-    const toPaymentMethod = () => {
-        navigate(`/product/paymentMethod?price=${price}`);
+    // 修改1: 删除toPaymentMethod函数
+    // const toPaymentMethod = () => {
+    //   navigate(`/product/paymentMethod?price=${price}`);
+    // };
+
+    // 修改2: 添加直接跳转到支付成功页面的函数
+    const toPaySuccess = () => {
+        navigate(`/product/submitOrder?price=${price}`);
     };
+
     const handleGoBack = () => {
         navigate(`/product/submitOrder?price=${price}`);
     };
@@ -132,7 +139,7 @@ const Pay = () => {
                         boxShadow: '0 4px 12px rgba(24, 144, 255, 0.3)',
                         transition: 'all 0.2s ease'
                     }}
-                    onClick={toPaymentMethod}
+                    onClick={toPaySuccess} // 修改3: 点击后直接跳转到支付成功页面
                 >
                     确认支付
                 </Button>

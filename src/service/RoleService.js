@@ -8,20 +8,6 @@ const defaultRoleList = [
       enable: true,
     },
     {
-      id: 2,
-      name: "商品管理员",
-      desc: "只能查看商品和营销",
-      menu: [1, 2, 4],
-      enable: true,
-    },
-    {
-      id: 3,
-      name: "订单管理员",
-      desc: "只能查看订单",
-      menu: [1, 2],
-      enable: true,
-    },
-    {
       id: 4,
       name: "一般用户",
       desc: "只能查看首页",

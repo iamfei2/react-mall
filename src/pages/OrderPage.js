@@ -63,19 +63,22 @@ const OrderPage = () => {
             title: '订单信息',
             key: 'info',
             render: (_, record) => (
-                <Space direction="vertical" size={0}>
-                    <div>
-                        <span style={{ fontWeight: 600 }}>订单号: </span>{record.orderNumber}
+                <Space direction="vertical" size={4} style={{ lineHeight: 1.5 }}>
+                    <div style={{ display: 'flex' }}>
+                        <span style={{ fontWeight: 600, minWidth: 60 }}>订单号: </span>
+                        <span style={{ fontWeight: 500 }}>{record.orderNumber}</span>
                     </div>
-                    <div>
-                        <span style={{ fontWeight: 600 }}>商品: </span>{record.productName}
+                    <div style={{ display: 'flex' }}>
+                        <span style={{ fontWeight: 600, minWidth: 60 }}>商品: </span>
+                        <span style={{ fontWeight: 500 }}>{record.productName}</span>
                     </div>
-                    <div>
-                        <span style={{ fontWeight: 600 }}>数量: </span>{record.amount}
+                    <div style={{ display: 'flex' }}>
+                        <span style={{ fontWeight: 600, minWidth: 60 }}>数量: </span>
+                        <span style={{ fontWeight: 500 }}>{record.amount}</span>
                     </div>
-                    <div>
-                        <span style={{ fontWeight: 600 }}>金额: </span>
-                        <span style={{ color: red[4], fontWeight: 600 }}>¥{record.price}</span>
+                    <div style={{ display: 'flex' }}>
+                        <span style={{ fontWeight: 600, minWidth: 60 }}>金额: </span>
+                        <span style={{ color: red[5], fontWeight: 600 }}>¥{record.price}</span>
                     </div>
                 </Space>
             ),
@@ -84,9 +87,19 @@ const OrderPage = () => {
             title: '用户信息',
             key: 'customer',
             render: (_, record) => (
-                <div>
-                    <div>{record.customerName}</div>
-                    <div style={{ color: '#666', marginTop: 4 }}>{record.storeName}</div>
+                <div style={{ lineHeight: 1.6 }}>
+                    <div style={{ fontWeight: 500 }}>{record.customerName}</div>
+                    <div style={{
+                        color: '#666',
+                        fontSize: 13,
+                        backgroundColor: '#f8f9fa',
+                        padding: '4px 8px',
+                        borderRadius: 4,
+                        marginTop: 6,
+                        display: 'inline-block'
+                    }}>
+                        {record.storeName}
+                    </div>
                 </div>
             ),
         },
@@ -98,18 +111,20 @@ const OrderPage = () => {
             render: (image) => (
                 <div style={{
                     backgroundColor: '#f8f9fa',
-                    borderRadius: 4,
+                    borderRadius: 6,
                     padding: 8,
                     display: 'flex',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    boxShadow: '0 2px 6px rgba(0,0,0,0.05)'
                 }}>
                     <img
                         src={image}
                         alt="商品图片"
                         style={{
-                            width: '50px',
-                            height: '50px',
-                            objectFit: 'contain'
+                            width: '60px',
+                            height: '60px',
+                            objectFit: 'contain',
+                            borderRadius: 4
                         }}
                     />
                 </div>
@@ -124,7 +139,12 @@ const OrderPage = () => {
             render: (status) => (
                 <Tag
                     color={status === 1 ? green[5] : orange[5]}
-                    style={{ fontWeight: 600 }}
+                    style={{
+                        fontWeight: 600,
+                        padding: '4px 10px',
+                        borderRadius: 12,
+                        minWidth: 70
+                    }}
                 >
                     {status === 1 ? '已发货' : '未发货'}
                 </Tag>
@@ -136,21 +156,37 @@ const OrderPage = () => {
             width: 200,
             align: 'center',
             render: (_, record) => (
-                <Space>
+                <Space size={8}>
                     {record.status === 0 ? (
                         <Button
                             type="primary"
-                            style={{ background: green[5], borderColor: green[5] }}
+                            style={{
+                                background: green[5],
+                                borderColor: green[5],
+                                boxShadow: '0 2px 4px rgba(82,196,26,0.3)'
+                            }}
                             onClick={() => handleShip(record.id)}
                         >
                             发货
                         </Button>
                     ) : (
-                        <Button disabled>已完成</Button>
+                        <Button
+                            disabled
+                            style={{
+                                background: '#f0f0f0',
+                                color: '#999',
+                                borderColor: '#d9d9d9'
+                            }}
+                        >
+                            已完成
+                        </Button>
                     )}
                     <Button
                         type="primary"
                         danger
+                        style={{
+                            boxShadow: '0 2px 4px rgba(245,34,45,0.3)'
+                        }}
                         onClick={() => onDelete(record.id)}
                     >
                         删除
@@ -166,30 +202,81 @@ const OrderPage = () => {
     );
 
     return (
-        <div style={{ padding: 24 }}>
+        <div style={{
+            padding: 24,
+            background: '#f5f7fa'
+        }}>
             <Card
-                title={<Title level={4} style={{ margin: 0 }}>订单管理</Title>}
+                title={
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: '8px 0'
+                    }}>
+                        <Title
+                            level={4}
+                            style={{
+                                margin: 0,
+                                fontWeight: 600,
+                                color: '#2c3e50'
+                            }}
+                        >
+                            订单管理
+                        </Title>
+                    </div>
+                }
                 bordered={false}
+                headStyle={{
+                    borderBottom: '1px solid #f0f0f0',
+                    padding: '0 16px'
+                }}
+                bodyStyle={{
+                    padding: '16px 24px'
+                }}
+                style={{
+                    borderRadius: 12,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
+                }}
                 extra={
                     <Button
                         type="primary"
                         icon={<PlusOutlined />}
                         onClick={onAddBtnClick}
-                        style={{ background: '#1890ff', borderColor: '#1890ff' }}
+                        style={{
+                            background: '#1890ff',
+                            borderColor: '#1890ff',
+                            fontWeight: 500,
+                            height: 36
+                        }}
                     >
                         添加订单
                     </Button>
                 }
             >
-                <div style={{ marginBottom: 16 }}>
+                <div style={{
+                    marginBottom: 24,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                }}>
                     <Input
                         placeholder="搜索订单（商品名/用户名）"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        suffix={<SearchOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
+                        suffix={<SearchOutlined style={{ color: '#bfbfbf' }} />}
                         allowClear
-                        style={{ width: 300 }}
+                        style={{
+                            width: 320,
+                            height: 40,
+                            borderRadius: 8
+                        }}
                     />
+                    <div style={{
+                        fontSize: 14,
+                        color: '#666'
+                    }}>
+                        共 {filteredOrders.length} 条订单
+                    </div>
                 </div>
 
                 <Table
@@ -200,7 +287,14 @@ const OrderPage = () => {
                         position: ['bottomCenter'],
                         showSizeChanger: true,
                         pageSizeOptions: ['5', '10', '20'],
-                        showTotal: (total) => `共 ${total} 条订单`
+                        showTotal: (total) => `共 ${total} 条订单`,
+                        style: { marginTop: 24 }
+                    }}
+                    rowClassName={() => 'order-table-row'}
+                    style={{
+                        border: '1px solid #f0f0f0',
+                        borderRadius: 8,
+                        overflow: 'hidden'
                     }}
                 />
             </Card>
