@@ -346,7 +346,7 @@ const OrderDetailPage = () => {
           <PriceCard>
             <div className="price-row">
               <div className="label">商品总计</div>
-              <div className="value">￥{totalPrice === 0 ? 4899 : totalPrice}</div>
+              <div className="value">￥{totalPrice === 0 ? 888 : totalPrice}</div>
             </div>
           </PriceCard>
         </CreateOrderContainer>

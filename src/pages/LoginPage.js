@@ -118,22 +118,7 @@ const LoginPage = () => {
                         </div>
                     </div>
 
-                    <Alert
-                        message={
-                            <div style={{ textAlign: "center", fontWeight: 500 }}>
-                                <div>管理员: admin / 123456</div>
-                                <div>普通用户: Customer1 / Customer1</div>
-                            </div>
-                        }
-                        type="info"
-                        showIcon
-                        style={{
-                            marginBottom: 30,
-                            borderRadius: 8,
-                            background: "rgba(24, 144, 255, 0.05)",
-                            border: "1px solid rgba(24, 144, 255, 0.15)"
-                        }}
-                    />
+
 
                     <Form.Item
                         name="username"

@@ -237,21 +237,7 @@ const OrderPage = () => {
                     borderRadius: 12,
                     boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
                 }}
-                extra={
-                    <Button
-                        type="primary"
-                        icon={<PlusOutlined />}
-                        onClick={onAddBtnClick}
-                        style={{
-                            background: '#1890ff',
-                            borderColor: '#1890ff',
-                            fontWeight: 500,
-                            height: 36
-                        }}
-                    >
-                        添加订单
-                    </Button>
-                }
+
             >
                 <div style={{
                     marginBottom: 24,

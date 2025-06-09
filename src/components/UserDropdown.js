@@ -25,10 +25,7 @@ function UserDropdown() {
         navigate("/login");
     }, [navigate]);
 
-    // 检查当前是否在登录页面
-    if (location.pathname === "/login") {
-        return null; // 在登录页面不显示组件
-    }
+
 
     const currentUser = userService.getCurrentUser();
     const navItems = [

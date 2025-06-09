@@ -195,6 +195,8 @@ const ProductDetail = () => {
     const handleBuyNow = () => {
         setIsBuying(true);
         setIsDrawerVisible(true);
+
+
     };
 
     // const handleOk = () => {

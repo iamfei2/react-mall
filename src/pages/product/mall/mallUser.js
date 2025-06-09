@@ -13,7 +13,7 @@ import {
     CommentOutlined,
     CrownFilled,
     RightOutlined,
-    GiftFilled
+    GiftFilled, LeftOutlined
 } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
@@ -56,6 +56,14 @@ const MallUser = () => {
                         size={48}
                         style={{ border: "2px solid rgba(255,255,255,0.3)", marginRight: 12 }}
                     />
+                    <Tooltip title="退出登录">
+                        <Button
+                            type="link"
+                            icon={<LeftOutlined style={{ color: "white" }} />}
+                            onClick={toLogin}
+                            style={{ color: "white" }}
+                        ></Button>
+                    </Tooltip>
                     <div>
                         <div style={{ fontSize: 18, fontWeight: 600, color: "white" }}>{userData.name}</div>
                         <Badge
@@ -88,7 +96,6 @@ const MallUser = () => {
                 </div>
             </div>
 
-            {/* 用户成长体系 */}
             <div style={{ margin: "16px", marginTop: 24 }}>
                 <Card
                     style={{
@@ -256,7 +263,6 @@ const MallUser = () => {
                 </Card>
             </div>
 
-            {/* 推荐服务区 */}
             <div style={{ margin: "16px" }}>
                 <Card
                     style={{
@@ -329,7 +335,7 @@ const MallUser = () => {
                                     justifyContent: "center"
                                 }}
                             >
-                                <span style={{ marginLeft: 8 }}>生日特权</span>
+                                <span style={{ marginLeft: 8 }}></span>
                             </Button>
                         </Col>
                     </Row>

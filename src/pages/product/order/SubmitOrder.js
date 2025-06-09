@@ -11,6 +11,7 @@ const SubmitOrder = () => {
     const searchParams = new URLSearchParams(location.search);
     const price = searchParams.get('price');
     const toPay = () => {
+
         navigate(`/product/pay?price=${price}`);
     };
 
