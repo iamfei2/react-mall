@@ -23,16 +23,16 @@ import ProductDetail from "./pages/product/order/ProductDetail";
 import CreateOrder from "./pages/product/order/CreateOrder";
 import OrderDetail from "./pages/product/order/OrderDetail";
 
-import MallHome from "./pages/product/mall/mallHome";//by ly
-import MallGenre from "./pages/product/mall/mallGenre";//by ly
-import MallGenreChildren from "./pages/product/mall/MallGenreChildren";//by ly
-import MallShoppingCar from "./pages/product/mall/mallShoppingCar";//by ly
-import BrandList from "./pages/product/mall/brandList"//by ly
-import Mall from "./pages/product/mall/mall";//by ly
-import ProductList from "./pages/product/mall/productList"//by ly
-import ProductGenreList from "./pages/product/mall/productGenreList"//by ly
-import ProductBrandList from "./pages/product/mall/productBrandList"//by ly
-import ProductDetail1 from "./pages/product/mall/productDetail" //by ly 这是我写重复的要改一下
+import MallHome from "./pages/product/mall/mallHome";
+import MallGenre from "./pages/product/mall/mallGenre";
+import MallGenreChildren from "./pages/product/mall/MallGenreChildren";
+import MallShoppingCar from "./pages/product/mall/mallShoppingCar";
+import BrandList from "./pages/product/mall/brandList"
+import Mall from "./pages/product/mall/mall";
+import ProductList from "./pages/product/mall/productList"
+import ProductGenreList from "./pages/product/mall/productGenreList"
+import ProductBrandList from "./pages/product/mall/productBrandList"
+import ProductDetail1 from "./pages/product/mall/productDetail"
 
 import MallUser from "./pages/product/mall/mallUser";
 import MallOrderManagement from "./pages/product/mall/MallOrderManagement";

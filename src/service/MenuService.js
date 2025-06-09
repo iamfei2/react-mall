@@ -18,7 +18,7 @@ const defaultMenuList = [
     id: 6,
     name: "用户信息管理",
     path: "user",
-    parent: 0, // 关键修改：从5改为0（顶级菜单）
+    parent: 0,
     enable: true,
     locked: true,
   },
@@ -26,7 +26,7 @@ const defaultMenuList = [
     id: 7,
     name: "左侧菜单管理",
     path: "menu",
-    parent: 0, // 关键修改：从5改为0（顶级菜单）
+    parent: 0,
     enable: true,
     locked: true,
   },
@@ -34,7 +34,7 @@ const defaultMenuList = [
     id: 8,
     name: "角色管理",
     path: "role",
-    parent: 0, // 关键修改：从5改为0（顶级菜单）
+    parent: 0,
     enable: true,
     locked: true,
   }

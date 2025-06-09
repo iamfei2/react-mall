@@ -1,4 +1,3 @@
-//by ly 我的商品数据是活的，可能需要修改一个
 import product1 from "./images/product1.png"
 import product2 from "./images/product2.png"
 import product3 from "./images/product3.png"
@@ -277,57 +276,10 @@ class ProductService {
         return this.productList.find(product => product.id === parseInt(id));
     }
 
-    // getDisplayMenus() {
-    //     const buildTree = (menuList, parentId = 0) => {
-    //         return menuList
-    //             .filter((menu) => menu.enable && menu.parent === parentId)
-    //             .map((menu) => {
-    //                 const children = buildTree(menuList, menu.id);
-    //                 return {
-    //                     ...menu,
-    //                     children: children.length ? children : undefined,
-    //                 };
-    //             });
-    //     };
-    //     return buildTree(this.menuList);
-    // }
-    //
-    // addMenu(menu) {
-    //     menu.id = this.menuList.reduce((max, u) => (u.id > max ? u.id : max), 0) + 1;
-    //     this.menuList.push(menu);
-    //     this._setData();
-    // }
-    //
-    // editMenu(menu) {
-    //     const index = this.menuList.findIndex((m) => m.id === menu.id);
-    //     if (index !== -1) {
-    //         if (this.menuList[index].locked) {
-    //             return;
-    //         }
-    //         this.menuList[index] = menu;
-    //         this._setData();
-    //     }
-    // }
-    //
-    // deleteMenu(id) {
-    //     const index = this.menuList.findIndex((menu) => menu.id === id);
-    //     if (index !== -1) {
-    //         if (this.menuList[index].locked) {
-    //             return;
-    //         }
-    //         this.menuList.splice(index, 1);
-    //         this._setData();
-    //     }
-    // }
+
 
     _getData() {
-        // const data = localStorage.getItem('mallGenreList');
-        // if (data) {
-        //     this.mallGenreList = JSON.parse(data);
-        // } else {
-        //     this.mallGenreList = defaultMallGenreList;
-        //     this._setData();
-        // }
+
 
         this.productList = defaultProductList;
         this._setData();

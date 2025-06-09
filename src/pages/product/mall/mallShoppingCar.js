@@ -17,20 +17,20 @@ const MallShoppingCar = () => {
         return savedCart ? JSON.parse(savedCart) : [
             {
                 id: 1,
-                name: '三只松鼠坚果礼',
-                description: '礼盒内汇聚了来自世界各地的优质坚果，开心果、腰果、巴旦木、核桃等应有尽有，每一颗都精心挑选，颗颗饱满，散发着诱人的光泽。咬上一口，丰富的口感在舌尖绽放，坚果的香脆瞬间征服味蕾。',
-                price: 888,
+                name: '零食大礼包',
+                description: '美味大礼包',
+                price: 666,
                 quantity: 1,
-                image: './images/product19.png',
+                image: '/product1.png',
                 isChecked: true,
             },
             {
                 id: 2,
-                name: '威龙辣条礼包',
-                description: '卫龙辣条礼包精心挑选了多种不同风味的零食，堪称零食界的 “全明星阵容”。每一款都有其独特的风味和口感，满足你对不同口感和味道的需求。',
-                price: 399,
+                name: '美的吹风机',
+                description: '',
+                price: 66,
                 quantity: 1,
-                image: './images/product2.png',
+                image: '/product2.jpg',
                 isChecked: true,
             },
         ];
@@ -49,20 +49,11 @@ const MallShoppingCar = () => {
     }, [location.state]);
 
     const addNewItem = (productInfo) => {
-        // 添加安全检查
-        if (!productInfo?.product) {
-            console.error("Invalid productInfo:", productInfo);
-            return;
-        }
-
         const { product, selectedColor } = productInfo;
-
-        // 添加商品名安全检查
-        const itemName = product?.name || "Unnamed Product";
 
         // 检查是否已存在相同商品
         const existingItemIndex = cartItems.findIndex(item =>
-            item.name === itemName && item.description === selectedColor
+            item.name === product.name && item.description === selectedColor
         );
 
         if (existingItemIndex !== -1) {
@@ -74,7 +65,7 @@ const MallShoppingCar = () => {
             // 如果不存在，添加新商品
             const newCartItem = {
                 id: Date.now(), // 使用时间戳作为唯一ID
-                name: itemName,
+                name: product.name,
                 description: selectedColor,
                 price: parseFloat(product.price.replace('￥', '')),
                 quantity: 1,
@@ -266,10 +257,10 @@ const MallShoppingCar = () => {
                         }}>
                             <div>
                                 <Checkbox checked={selectedCount === cartItems.length && cartItems.length > 0}
-                                          onChange={() => {
-                                              const allChecked = selectedCount === cartItems.length;
-                                              setCartItems(cartItems.map(item => ({ ...item, isChecked: !allChecked })));
-                                          }}
+                                    onChange={() => {
+                                        const allChecked = selectedCount === cartItems.length;
+                                        setCartItems(cartItems.map(item => ({ ...item, isChecked: !allChecked })));
+                                    }}
                                 >
                                     全选
                                 </Checkbox>
