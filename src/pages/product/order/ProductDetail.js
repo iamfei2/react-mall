@@ -149,8 +149,26 @@ const ProductDetail = () => {
     };
 
     const handleAddToCart = () => {
-        setIsBuying(false);
-        setIsDrawerVisible(true);
+        if (!product || !selectedColor) return;
+
+        const productInfo = {
+            id: product.id,
+            name: product.name,
+            description: selectedColor,
+            price: product.price,
+            originalPrice: product.originalPrice,
+            quantity: 1,
+            image: product.src
+        };
+
+        // 保存到 localStorage
+        localStorage.setItem('tempProductInfo', JSON.stringify(productInfo));
+
+        // 跳转到购物车页面并传递商品信息
+        navigate('/mall/mallShoppingCar', {
+            state: { productInfo }
+        });
+        message.success("成功添加至购物车");
     };
 
     const handleBuyNow = () => {
@@ -247,7 +265,7 @@ const ProductDetail = () => {
                 cart.push(productData);
             }
 
-            localStorage.setItem('cart', JSON.stringify(cart));
+            localStorage.setItem('shoppingCart', JSON.stringify(cart));
             message.success("成功添加至购物车");
         }
 

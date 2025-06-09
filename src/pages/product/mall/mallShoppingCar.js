@@ -30,7 +30,7 @@ const MallShoppingCar = () => {
                 description: '卫龙辣条礼包精心挑选了多种不同风味的零食，堪称零食界的 “全明星阵容”。每一款都有其独特的风味和口感，满足你对不同口感和味道的需求。',
                 price: 399,
                 quantity: 1,
-                image: './images/product2.png',
+                image: './images/product19.png',
                 isChecked: true,
             },
         ];
@@ -43,26 +43,18 @@ const MallShoppingCar = () => {
 
     // 当从商品详情页跳转过来时添加新商品
     useEffect(() => {
+        // 从 localStorage 或 location.state 获取商品信息
         if (location.state && location.state.productInfo) {
             addNewItem(location.state.productInfo);
         }
     }, [location.state]);
 
+// 添加新商品的函数
     const addNewItem = (productInfo) => {
-        // 添加安全检查
-        if (!productInfo?.product) {
-            console.error("Invalid productInfo:", productInfo);
-            return;
-        }
-
-        const { product, selectedColor } = productInfo;
-
-        // 添加商品名安全检查
-        const itemName = product?.name || "Unnamed Product";
-
         // 检查是否已存在相同商品
         const existingItemIndex = cartItems.findIndex(item =>
-            item.name === itemName && item.description === selectedColor
+            item.id === productInfo.id &&
+            item.description === productInfo.description
         );
 
         if (existingItemIndex !== -1) {
@@ -73,19 +65,13 @@ const MallShoppingCar = () => {
         } else {
             // 如果不存在，添加新商品
             const newCartItem = {
-                id: Date.now(), // 使用时间戳作为唯一ID
-                name: itemName,
-                description: selectedColor,
-                price: parseFloat(product.price.replace('￥', '')),
-                quantity: 1,
-                image: product.images[selectedColor] || product.defaultImage,
-                isChecked: true,
-                originalPrice: product.originalPrice,
+                ...productInfo,
+                quantity: 1
             };
             setCartItems([...cartItems, newCartItem]);
         }
 
-        // 清除传递的状态，避免重复添加
+        // 清除传递的状态
         navigate(location.pathname, { replace: true, state: {} });
     };
 
