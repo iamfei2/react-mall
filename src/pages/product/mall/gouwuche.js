@@ -6,7 +6,7 @@ import './style.css';
 
 const { Text, Title } = Typography;
 
-const MallShoppingCar = () => {
+const Gouwuche = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -307,4 +307,4 @@ const MallShoppingCar = () => {
     );
 };
 
-export default MallShoppingCar;
+export default Gouwuche;
