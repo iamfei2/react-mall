@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, {useState, useRef, useEffect} from "react";
 import styled from "styled-components";
 import { Image, Button, Drawer, Radio, message, Carousel } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import { ShoppingCartOutlined, HomeOutlined, ShoppingOutlined } from "@ant-design/icons";
-import OrderService from '../../../service/OrderService'; // 确保路径正确
+import OrderService from '../../../service/OrderService';
+import ProductService from "../../../service/ProductService"; // 确保路径正确
 
 
 const ProductDetailContainer = styled.div`
@@ -127,6 +128,26 @@ const ProductDetail = () => {
     const [isBuying, setIsBuying] = useState(false);
     const carouselRef = useRef(null);
 
+    const location = useLocation();
+    const [productData, setProductData] = useState(null);
+
+    useEffect(() => {
+        // 从路由参数获取商品ID
+        const productId = new URLSearchParams(location.search).get('id');
+
+        if (productId) {
+            // 模拟从服务获取商品数据
+            const productService = new ProductService();
+            const product = productService.getProductById(parseInt(productId));
+            setProductData(product);
+        } else {
+            // 使用默认商品数据（开发用）
+            setProductData({
+                ...product,
+                id: 0,
+            });
+        }
+    }, [location]);
 
 
     const product = {
@@ -229,7 +250,7 @@ const ProductDetail = () => {
 
         // 确保 product 对象包含必要的 id 属性
         const productWithId = {
-            id: product.id || Date.now(),
+            id: product.id,
             name: product.name || "未命名商品",
             price: product.price || 0,
             // 添加其他必要属性...
@@ -243,26 +264,42 @@ const ProductDetail = () => {
             quantity: 1
         };
 
+        // 构建购物车商品数据
+        const cartItem = {
+            id: productWithId.id,
+            name: productWithId.name,
+            description: selectedColor,
+            price: typeof productWithId.price === 'string'
+                ? parseFloat(productWithId.price.replace('￥', ''))
+                : productWithId.price,
+            quantity: 1,
+            image: productWithId.images[selectedColor] || productWithId.defaultImage,
+            isChecked: true,
+            originalPrice: typeof productWithId.originalPrice === 'string'
+                ? parseFloat(productWithId.originalPrice.replace('￥', ''))
+                : productWithId.originalPrice
+        };
+
         if (isBuying) {
-            // 跳转到创建订单界面
-            localStorage.setItem('tempProductInfo', JSON.stringify(productData));
-            navigate('/product/CreateOrder', { state: { productInfo: productData } });
+            // 立即购买逻辑
+            localStorage.setItem('tempProductInfo', JSON.stringify({
+                product: productWithId,
+                selectedColor: selectedColor
+            }));
+            navigate('/product/CreateOrder', { state: { productInfo: productWithId } });
         } else {
-            // 添加到购物车
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // 加入购物车
+            const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 
             // 检查是否已存在相同商品
             const existingIndex = cart.findIndex(item =>
-                item.product.id === productData.product.id &&
-                item.selectedColor === productData.selectedColor
+                item.id === cartItem.id && item.description === cartItem.description
             );
 
             if (existingIndex !== -1) {
-                // 增加数量
                 cart[existingIndex].quantity += 1;
             } else {
-                // 添加新商品
-                cart.push(productData);
+                cart.push(cartItem);
             }
 
             localStorage.setItem('shoppingCart', JSON.stringify(cart));
