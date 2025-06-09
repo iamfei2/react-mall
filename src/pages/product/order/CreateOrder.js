@@ -335,10 +335,10 @@ const CreateOrderPage = () => {
             </div>
             <div className="address-info">
               <div className="name-phone">
-                <div className="name">张先生</div>
-                <div className="phone">138****5678</div>
+                <div className="name">李先生</div>
+                <div className="phone">166****8621</div>
               </div>
-              <div className="address">上海市浦东新区张江高科技园区亮景路188号汇智国际商业中心A座1203室</div>
+              <div className="address">北京交通大学</div>
             </div>
             <div className="edit-btn">
               <RightOutlined />

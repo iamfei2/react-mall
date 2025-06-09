@@ -22,7 +22,7 @@ const ProductList = () => {
 
     if (id === "1") {
         items = product.filter(item => item.isSeckill);
-        header = "秒杀商品";
+        header = "限时低价商品";
         icon = <FireOutlined style={{ color: "#ff4d4f", marginRight: 8 }} />;
     } else {
         items = product.filter(item => item.isRecommend);
@@ -89,7 +89,7 @@ const ProductList = () => {
             {/* 内容区域 */}
             <div style={{
                 padding: "16px",
-                marginTop: "48px", // 顶部导航栏高度 
+                marginTop: "48px", // 顶部导航栏高度
             }}>
                 <div style={{
                     marginBottom: 16,
@@ -101,7 +101,7 @@ const ProductList = () => {
                         {items.length}件商品
                     </Text>
                     <Tag color={id === "1" ? "red" : "gold"}>
-                        {id === "1" ? "限时秒杀" : "品质推荐"}
+                        {id === "1" ? "限时低价" : "品质推荐"}
                     </Tag>
                 </div>
 
@@ -183,7 +183,7 @@ const ProductList = () => {
                                         ¥{item.price}
                                     </Text>
                                     {item.isSeckill && (
-                                        <Tag color="red" style={{ margin: 0 }}>秒杀</Tag>
+                                        <Tag color="red" style={{ margin: 0 }}>低价</Tag>
                                     )}
                                 </div>
                                 {item.isRecommend && (
@@ -243,7 +243,7 @@ const ProductList = () => {
                             </div>
                         </div>
                         <Text strong style={{ fontSize: 16, color: "#666" }}>
-                            {id === "1" ? "暂无秒杀商品" : "暂无推荐商品"}
+                            {id === "1" ? "暂无低价商品" : "暂无推荐商品"}
                         </Text>
                         <Text type="secondary" style={{ display: "block", marginTop: 8 }}>
                             试试返回或浏览其他商品

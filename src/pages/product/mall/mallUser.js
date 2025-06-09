@@ -27,8 +27,6 @@ const MallUser = () => {
 
     // 用户数据
     const userData = {
-        name: "Tlectronic",
-        level: "黄金会员",
         points: 5000,
         growth: 1000,
         coupons: 3,

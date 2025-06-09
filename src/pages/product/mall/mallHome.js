@@ -121,7 +121,7 @@ const MallHome = () => {
                     </Carousel>
                 </div>
 
-                {/* 品牌制造商直供区块 */}
+                {/* 品牌 */}
                 <Card
                     bordered={false}
                     bodyStyle={{ padding: "16px" }}
@@ -141,7 +141,7 @@ const MallHome = () => {
                         }}
                     >
                         <TrophyTwoTone twoToneColor="#1677ff" style={{ fontSize: 28 }} />
-                        <Text strong style={{ marginLeft: 10, fontSize: 18, color: "#1677ff" }}>品牌制造商直供</Text>
+                        <Text strong style={{ marginLeft: 10, fontSize: 18, color: "#1677ff" }}>品牌</Text>
                         <RightOutlined style={{ fontSize: '20px', marginLeft: "auto", color: "#1677ff" }} />
                     </div>
 
@@ -185,7 +185,7 @@ const MallHome = () => {
                     </div>
                 </Card>
 
-                {/* 秒杀专区区块 */}
+                {/* 限时低价 */}
                 <Card
                     bordered={false}
                     bodyStyle={{ padding: "16px" }}
@@ -205,7 +205,7 @@ const MallHome = () => {
                         }}
                     >
                         <FireTwoTone twoToneColor="#ff4d4f" style={{ fontSize: 28 }} />
-                        <Text strong style={{ marginLeft: 10, fontSize: 18, color: "#ff4d4f" }}>秒杀专区</Text>
+                        <Text strong style={{ marginLeft: 10, fontSize: 18, color: "#ff4d4f" }}>限时低价专区</Text>
                         <div style={{
                             marginLeft: "auto",
                             display: "flex",
@@ -255,7 +255,7 @@ const MallHome = () => {
                                     fontSize: 12,
                                     borderBottomLeftRadius: 8
                                 }}>
-                                    秒杀
+                                    限时低价
                                 </div>
                                 <div style={{ height: 100, display: "flex", alignItems: "center", justifyContent: "center" }}>
                                     <img
@@ -309,7 +309,7 @@ const MallHome = () => {
                     </div>
                 </Card>
 
-                {/* 人气推荐区块 */}
+                {/* 推荐商品 */}
                 <Card
                     bordered={false}
                     bodyStyle={{ padding: "16px" }}
@@ -328,7 +328,7 @@ const MallHome = () => {
                         }}
                     >
                         <LikeTwoTone twoToneColor="#f5222d" style={{ fontSize: 28 }} />
-                        <Text strong style={{ marginLeft: 10, fontSize: 18, color: "#f5222d" }}>人气推荐</Text>
+                        <Text strong style={{ marginLeft: 10, fontSize: 18, color: "#f5222d" }}>推荐商品</Text>
                         <RightOutlined style={{ fontSize: '20px', marginLeft: "auto", color: "#f5222d" }} />
                     </div>
 

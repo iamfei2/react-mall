@@ -8,7 +8,7 @@ import 舒克 from "./images/舒克.png"
 const defaultBrandList = [
     {
         id:1,
-        frontName: `xiaomi`,
+        frontName: `三只松鼠`,
         name: `三只松鼠`,
         src: 三只松鼠,
         story:'三只松鼠，是三只松鼠股份有限公司旗下的休闲零食品牌。三只松鼠股份有限公司主要经营坚果和休闲零食，地址位于安徽省芜湖市，现已发展成为累计服务超1.7亿消费者的坚果行业龙头企业及上市公司】，并成功孵化婴童食品品牌“小鹿蓝蓝” 。'
@@ -62,57 +62,8 @@ class BrandService {
         return this.brandList.concat();
     }
 
-    // getDisplayMenus() {
-    //     const buildTree = (menuList, parentId = 0) => {
-    //         return menuList
-    //             .filter((menu) => menu.enable && menu.parent === parentId)
-    //             .map((menu) => {
-    //                 const children = buildTree(menuList, menu.id);
-    //                 return {
-    //                     ...menu,
-    //                     children: children.length ? children : undefined,
-    //                 };
-    //             });
-    //     };
-    //     return buildTree(this.menuList);
-    // }
-    //
-    // addMenu(menu) {
-    //     menu.id = this.menuList.reduce((max, u) => (u.id > max ? u.id : max), 0) + 1;
-    //     this.menuList.push(menu);
-    //     this._setData();
-    // }
-    //
-    // editMenu(menu) {
-    //     const index = this.menuList.findIndex((m) => m.id === menu.id);
-    //     if (index !== -1) {
-    //         if (this.menuList[index].locked) {
-    //             return;
-    //         }
-    //         this.menuList[index] = menu;
-    //         this._setData();
-    //     }
-    // }
-    //
-    // deleteMenu(id) {
-    //     const index = this.menuList.findIndex((menu) => menu.id === id);
-    //     if (index !== -1) {
-    //         if (this.menuList[index].locked) {
-    //             return;
-    //         }
-    //         this.menuList.splice(index, 1);
-    //         this._setData();
-    //     }
-    // }
 
     _getData() {
-        // const data = localStorage.getItem('mallGenreList');
-        // if (data) {
-        //     this.mallGenreList = JSON.parse(data);
-        // } else {
-        //     this.mallGenreList = defaultMallGenreList;
-        //     this._setData();
-        // }
 
         this.brandList = defaultBrandList;
         this._setData();

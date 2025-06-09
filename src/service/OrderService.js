@@ -11,7 +11,7 @@ const defaultOrderList = [
         productName: '零食大礼包',
         orderNumber: '123456',
         customerName: 'Customer1',
-        price: '￥666',
+        price: '￥366',
         amount: 2,
         status: 0,
         storeName: '零食大礼包',

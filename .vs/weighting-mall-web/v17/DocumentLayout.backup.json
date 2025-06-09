@@ -103,8 +103,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\MallOrderManagement.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallShoppingCar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\mallShoppingCar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\gouwuche.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\product\\mall\\gouwuche.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallGenre.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -471,11 +471,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "mallShoppingCar.js",
-              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallShoppingCar.js",
-              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\mallShoppingCar.js",
-              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\mallShoppingCar.js",
-              "RelativeToolTip": "src\\pages\\product\\mall\\mallShoppingCar.js",
+              "Title": "gouwuche.js",
+              "DocumentMoniker": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\gouwuche.js",
+              "RelativeDocumentMoniker": "src\\pages\\product\\mall\\gouwuche.js",
+              "ToolTip": "D:\\111\\weighting-mall-web\\src\\pages\\product\\mall\\gouwuche.js",
+              "RelativeToolTip": "src\\pages\\product\\mall\\gouwuche.js",
               "ViewState": "AgIAABYBAAAAAAAAAAAAADUBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-06-02T11:15:28.128Z"
