@@ -6,7 +6,7 @@ import './style.css';
 
 const { Text, Title } = Typography;
 
-const MallShoppingCar = () => {
+const Gouwuche = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -17,20 +17,20 @@ const MallShoppingCar = () => {
         return savedCart ? JSON.parse(savedCart) : [
             {
                 id: 1,
-                name: '三只松鼠坚果礼',
-                description: '礼盒内汇聚了来自世界各地的优质坚果，开心果、腰果、巴旦木、核桃等应有尽有，每一颗都精心挑选，颗颗饱满，散发着诱人的光泽。咬上一口，丰富的口感在舌尖绽放，坚果的香脆瞬间征服味蕾。',
-                price: 888,
+                name: '零食大礼包',
+                description: '美味大礼包',
+                price: 666,
                 quantity: 1,
-                image: './images/product19.png',
+                image: '/product1.png',
                 isChecked: true,
             },
             {
                 id: 2,
-                name: '威龙辣条礼包',
-                description: '卫龙辣条礼包精心挑选了多种不同风味的零食，堪称零食界的 “全明星阵容”。每一款都有其独特的风味和口感，满足你对不同口感和味道的需求。',
-                price: 399,
+                name: '美的吹风机',
+                description: '',
+                price: 66,
                 quantity: 1,
-                image: './images/product19.png',
+                image: '/product2.jpg',
                 isChecked: true,
             },
         ];
@@ -43,18 +43,17 @@ const MallShoppingCar = () => {
 
     // 当从商品详情页跳转过来时添加新商品
     useEffect(() => {
-        // 从 localStorage 或 location.state 获取商品信息
         if (location.state && location.state.productInfo) {
             addNewItem(location.state.productInfo);
         }
     }, [location.state]);
 
-// 添加新商品的函数
     const addNewItem = (productInfo) => {
+        const { product, selectedColor } = productInfo;
+
         // 检查是否已存在相同商品
         const existingItemIndex = cartItems.findIndex(item =>
-            item.id === productInfo.id &&
-            item.description === productInfo.description
+            item.name === product.name && item.description === selectedColor
         );
 
         if (existingItemIndex !== -1) {
@@ -65,13 +64,19 @@ const MallShoppingCar = () => {
         } else {
             // 如果不存在，添加新商品
             const newCartItem = {
-                ...productInfo,
-                quantity: 1
+                id: Date.now(), // 使用时间戳作为唯一ID
+                name: product.name,
+                description: selectedColor,
+                price: parseFloat(product.price.replace('￥', '')),
+                quantity: 1,
+                image: product.images[selectedColor] || product.defaultImage,
+                isChecked: true,
+                originalPrice: product.originalPrice,
             };
             setCartItems([...cartItems, newCartItem]);
         }
 
-        // 清除传递的状态
+        // 清除传递的状态，避免重复添加
         navigate(location.pathname, { replace: true, state: {} });
     };
 
@@ -252,10 +257,10 @@ const MallShoppingCar = () => {
                         }}>
                             <div>
                                 <Checkbox checked={selectedCount === cartItems.length && cartItems.length > 0}
-                                          onChange={() => {
-                                              const allChecked = selectedCount === cartItems.length;
-                                              setCartItems(cartItems.map(item => ({ ...item, isChecked: !allChecked })));
-                                          }}
+                                    onChange={() => {
+                                        const allChecked = selectedCount === cartItems.length;
+                                        setCartItems(cartItems.map(item => ({ ...item, isChecked: !allChecked })));
+                                    }}
                                 >
                                     全选
                                 </Checkbox>
@@ -302,4 +307,4 @@ const MallShoppingCar = () => {
     );
 };
 
-export default MallShoppingCar;
+export default Gouwuche;
