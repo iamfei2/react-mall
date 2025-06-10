@@ -299,7 +299,20 @@ const CreateOrderPage = () => {
   } = productInfo;
 
   // 计算总价时使用安全访问
-  const finalPrice = product.price ? product.price * quantity : 0;
+  const calculateTotalPrice = () => {
+    if (selectedItems.length > 0) {
+      // 计算购物车多商品总价
+      return selectedItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+    } else if (product.price) {
+      // 单个商品价格
+      return product.price * quantity;
+    }
+    return 0;
+  };
+
+  const rawTotal = calculateTotalPrice(); // 商品原始总价
+  const discount = 30; // 优惠金额（假设固定）
+  const finalPrice = rawTotal - discount; // 实付金额
 
   const handleBack = () => {
     window.history.back();

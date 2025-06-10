@@ -26,7 +26,7 @@ import OrderDetail from "./pages/product/order/OrderDetail";
 import MallHome from "./pages/product/mall/mallHome";
 import MallGenre from "./pages/product/mall/mallGenre";
 import MallGenreChildren from "./pages/product/mall/MallGenreChildren";
-import Gouwuche from "./pages/product/mall/gouwuche";
+import MallShoppingCar from "./pages/product/mall/mallShoppingCar";
 import BrandList from "./pages/product/mall/brandList"
 import Mall from "./pages/product/mall/mall";
 import ProductList from "./pages/product/mall/productList"
@@ -106,7 +106,7 @@ const router = createBrowserRouter([
           { path: 'computer', element: <MallGenreChildren /> },
         ]
       },
-      { path: 'mallShoppingCar', element: <Gouwuche /> },
+      { path: 'mallShoppingCar', element: <MallShoppingCar /> },
       { path: 'mallUser', element: <MallUser /> },
       { path: 'mallOrderManagement', element: <MallOrderManagement /> },
       { path: 'brandList', element: <BrandList /> },

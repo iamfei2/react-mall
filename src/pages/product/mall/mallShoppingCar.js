@@ -6,7 +6,7 @@ import './style.css';
 
 const { Text, Title } = Typography;
 
-const Gouwuche = () => {
+const MallShoppingCar = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -41,19 +41,19 @@ const Gouwuche = () => {
         localStorage.setItem('shoppingCart', JSON.stringify(cartItems));
     }, [cartItems]);
 
-    // 当从商品详情页跳转过来时添加新商品
     useEffect(() => {
+        // 从 localStorage 或 location.state 获取商品信息
         if (location.state && location.state.productInfo) {
             addNewItem(location.state.productInfo);
         }
     }, [location.state]);
 
+// 添加新商品的函数
     const addNewItem = (productInfo) => {
-        const { product, selectedColor } = productInfo;
-
         // 检查是否已存在相同商品
         const existingItemIndex = cartItems.findIndex(item =>
-            item.name === product.name && item.description === selectedColor
+            item.id === productInfo.id &&
+            item.description === productInfo.description
         );
 
         if (existingItemIndex !== -1) {
@@ -64,19 +64,13 @@ const Gouwuche = () => {
         } else {
             // 如果不存在，添加新商品
             const newCartItem = {
-                id: Date.now(), // 使用时间戳作为唯一ID
-                name: product.name,
-                description: selectedColor,
-                price: parseFloat(product.price.replace('￥', '')),
-                quantity: 1,
-                image: product.images[selectedColor] || product.defaultImage,
-                isChecked: true,
-                originalPrice: product.originalPrice,
+                ...productInfo,
+                quantity: 1
             };
             setCartItems([...cartItems, newCartItem]);
         }
 
-        // 清除传递的状态，避免重复添加
+        // 清除传递的状态
         navigate(location.pathname, { replace: true, state: {} });
     };
 
@@ -307,4 +301,4 @@ const Gouwuche = () => {
     );
 };
 
-export default Gouwuche;
+export default MallShoppingCar;
